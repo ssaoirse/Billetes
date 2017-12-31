@@ -21,6 +21,10 @@
 		04711AA61FF8ED1000029E58 /* AppError.m in Sources */ = {isa = PBXBuildFile; fileRef = 04711AA51FF8ED1000029E58 /* AppError.m */; };
 		04711AA91FF8EEA300029E58 /* JSONResponseSerializerWithData.m in Sources */ = {isa = PBXBuildFile; fileRef = 04711AA81FF8EEA300029E58 /* JSONResponseSerializerWithData.m */; };
 		04711AAC1FF8EFC800029E58 /* AppUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 04711AAB1FF8EFC800029E58 /* AppUtility.m */; };
+		04711AB01FF8F35500029E58 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04711AAF1FF8F35500029E58 /* LoginViewController.m */; };
+		04711AB31FF8F36A00029E58 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04711AB21FF8F36A00029E58 /* EventViewController.m */; };
+		04711AB61FF8F37A00029E58 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04711AB51FF8F37A00029E58 /* EventDetailViewController.m */; };
+		04711AB91FF8F38B00029E58 /* EventDayToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04711AB81FF8F38B00029E58 /* EventDayToolsViewController.m */; };
 		4C5F5685F3A486F10C2C0056 /* libPods-Billetes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F9B369826C63699D65E87B /* libPods-Billetes.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +55,14 @@
 		04711AA81FF8EEA300029E58 /* JSONResponseSerializerWithData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONResponseSerializerWithData.m; sourceTree = "<group>"; };
 		04711AAA1FF8EFC800029E58 /* AppUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppUtility.h; sourceTree = "<group>"; };
 		04711AAB1FF8EFC800029E58 /* AppUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppUtility.m; sourceTree = "<group>"; };
+		04711AAE1FF8F35500029E58 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		04711AAF1FF8F35500029E58 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		04711AB11FF8F36A00029E58 /* EventViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
+		04711AB21FF8F36A00029E58 /* EventViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
+		04711AB41FF8F37A00029E58 /* EventDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventDetailViewController.h; sourceTree = "<group>"; };
+		04711AB51FF8F37A00029E58 /* EventDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
+		04711AB71FF8F38B00029E58 /* EventDayToolsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventDayToolsViewController.h; sourceTree = "<group>"; };
+		04711AB81FF8F38B00029E58 /* EventDayToolsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventDayToolsViewController.m; sourceTree = "<group>"; };
 		735A4E91AAF99F26112E08FA /* Pods-Billetes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billetes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Billetes/Pods-Billetes.release.xcconfig"; sourceTree = "<group>"; };
 		92F9B369826C63699D65E87B /* libPods-Billetes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Billetes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7C1113954D528643CA94C7 /* Pods-Billetes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billetes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Billetes/Pods-Billetes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +101,7 @@
 		0425973B1FF7A8CF00034E4B /* Billetes */ = {
 			isa = PBXGroup;
 			children = (
+				04711AAD1FF8F33200029E58 /* ViewControllers */,
 				04711A9A1FF8E9B600029E58 /* Utilities */,
 				04711A931FF8E8CB00029E58 /* Controllers */,
 				04711A8F1FF8E43800029E58 /* Models */,
@@ -140,6 +153,21 @@
 				04711AAB1FF8EFC800029E58 /* AppUtility.m */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		04711AAD1FF8F33200029E58 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				04711AAE1FF8F35500029E58 /* LoginViewController.h */,
+				04711AAF1FF8F35500029E58 /* LoginViewController.m */,
+				04711AB11FF8F36A00029E58 /* EventViewController.h */,
+				04711AB21FF8F36A00029E58 /* EventViewController.m */,
+				04711AB41FF8F37A00029E58 /* EventDetailViewController.h */,
+				04711AB51FF8F37A00029E58 /* EventDetailViewController.m */,
+				04711AB71FF8F38B00029E58 /* EventDayToolsViewController.h */,
+				04711AB81FF8F38B00029E58 /* EventDayToolsViewController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		3B812C7AD0B2B5EA783564C3 /* Pods */ = {
@@ -284,14 +312,18 @@
 				04711AA61FF8ED1000029E58 /* AppError.m in Sources */,
 				04711A921FF8E4F100029E58 /* Event.m in Sources */,
 				04711AA91FF8EEA300029E58 /* JSONResponseSerializerWithData.m in Sources */,
+				04711AB31FF8F36A00029E58 /* EventViewController.m in Sources */,
 				04711AA01FF8E9DB00029E58 /* URLConstants.m in Sources */,
 				042597411FF7A8CF00034E4B /* ViewController.m in Sources */,
+				04711AB61FF8F37A00029E58 /* EventDetailViewController.m in Sources */,
 				04711AAC1FF8EFC800029E58 /* AppUtility.m in Sources */,
 				0425974C1FF7A8CF00034E4B /* main.m in Sources */,
 				0425973E1FF7A8CF00034E4B /* AppDelegate.m in Sources */,
+				04711AB01FF8F35500029E58 /* LoginViewController.m in Sources */,
 				04711A991FF8E94500029E58 /* SettingsManager.m in Sources */,
 				04711A961FF8E8EF00029E58 /* WebServiceController.m in Sources */,
 				04711A9D1FF8E9CD00029E58 /* AppConstants.m in Sources */,
+				04711AB91FF8F38B00029E58 /* EventDayToolsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

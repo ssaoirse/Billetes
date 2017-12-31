@@ -13,6 +13,14 @@
 		042597461FF7A8CF00034E4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042597451FF7A8CF00034E4B /* Assets.xcassets */; };
 		042597491FF7A8CF00034E4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042597471FF7A8CF00034E4B /* LaunchScreen.storyboard */; };
 		0425974C1FF7A8CF00034E4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0425974B1FF7A8CF00034E4B /* main.m */; };
+		04711A921FF8E4F100029E58 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 04711A911FF8E4F100029E58 /* Event.m */; };
+		04711A961FF8E8EF00029E58 /* WebServiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04711A951FF8E8EF00029E58 /* WebServiceController.m */; };
+		04711A991FF8E94500029E58 /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04711A981FF8E94500029E58 /* SettingsManager.m */; };
+		04711A9D1FF8E9CD00029E58 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 04711A9C1FF8E9CD00029E58 /* AppConstants.m */; };
+		04711AA01FF8E9DB00029E58 /* URLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 04711A9F1FF8E9DB00029E58 /* URLConstants.m */; };
+		04711AA61FF8ED1000029E58 /* AppError.m in Sources */ = {isa = PBXBuildFile; fileRef = 04711AA51FF8ED1000029E58 /* AppError.m */; };
+		04711AA91FF8EEA300029E58 /* JSONResponseSerializerWithData.m in Sources */ = {isa = PBXBuildFile; fileRef = 04711AA81FF8EEA300029E58 /* JSONResponseSerializerWithData.m */; };
+		04711AAC1FF8EFC800029E58 /* AppUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 04711AAB1FF8EFC800029E58 /* AppUtility.m */; };
 		4C5F5685F3A486F10C2C0056 /* libPods-Billetes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F9B369826C63699D65E87B /* libPods-Billetes.a */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +35,22 @@
 		042597481FF7A8CF00034E4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0425974A1FF7A8CF00034E4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0425974B1FF7A8CF00034E4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04711A901FF8E4F100029E58 /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		04711A911FF8E4F100029E58 /* Event.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		04711A941FF8E8EF00029E58 /* WebServiceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebServiceController.h; sourceTree = "<group>"; };
+		04711A951FF8E8EF00029E58 /* WebServiceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebServiceController.m; sourceTree = "<group>"; };
+		04711A971FF8E94500029E58 /* SettingsManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsManager.h; sourceTree = "<group>"; };
+		04711A981FF8E94500029E58 /* SettingsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsManager.m; sourceTree = "<group>"; };
+		04711A9B1FF8E9CD00029E58 /* AppConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
+		04711A9C1FF8E9CD00029E58 /* AppConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConstants.m; sourceTree = "<group>"; };
+		04711A9E1FF8E9DB00029E58 /* URLConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLConstants.h; sourceTree = "<group>"; };
+		04711A9F1FF8E9DB00029E58 /* URLConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLConstants.m; sourceTree = "<group>"; };
+		04711AA41FF8ED1000029E58 /* AppError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppError.h; sourceTree = "<group>"; };
+		04711AA51FF8ED1000029E58 /* AppError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppError.m; sourceTree = "<group>"; };
+		04711AA71FF8EEA300029E58 /* JSONResponseSerializerWithData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONResponseSerializerWithData.h; sourceTree = "<group>"; };
+		04711AA81FF8EEA300029E58 /* JSONResponseSerializerWithData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONResponseSerializerWithData.m; sourceTree = "<group>"; };
+		04711AAA1FF8EFC800029E58 /* AppUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppUtility.h; sourceTree = "<group>"; };
+		04711AAB1FF8EFC800029E58 /* AppUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppUtility.m; sourceTree = "<group>"; };
 		735A4E91AAF99F26112E08FA /* Pods-Billetes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billetes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Billetes/Pods-Billetes.release.xcconfig"; sourceTree = "<group>"; };
 		92F9B369826C63699D65E87B /* libPods-Billetes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Billetes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7C1113954D528643CA94C7 /* Pods-Billetes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billetes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Billetes/Pods-Billetes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +89,9 @@
 		0425973B1FF7A8CF00034E4B /* Billetes */ = {
 			isa = PBXGroup;
 			children = (
+				04711A9A1FF8E9B600029E58 /* Utilities */,
+				04711A931FF8E8CB00029E58 /* Controllers */,
+				04711A8F1FF8E43800029E58 /* Models */,
 				0425973C1FF7A8CF00034E4B /* AppDelegate.h */,
 				0425973D1FF7A8CF00034E4B /* AppDelegate.m */,
 				0425973F1FF7A8CF00034E4B /* ViewController.h */,
@@ -76,6 +103,43 @@
 				0425974B1FF7A8CF00034E4B /* main.m */,
 			);
 			path = Billetes;
+			sourceTree = "<group>";
+		};
+		04711A8F1FF8E43800029E58 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04711A901FF8E4F100029E58 /* Event.h */,
+				04711A911FF8E4F100029E58 /* Event.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		04711A931FF8E8CB00029E58 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04711A941FF8E8EF00029E58 /* WebServiceController.h */,
+				04711A951FF8E8EF00029E58 /* WebServiceController.m */,
+				04711A971FF8E94500029E58 /* SettingsManager.h */,
+				04711A981FF8E94500029E58 /* SettingsManager.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		04711A9A1FF8E9B600029E58 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				04711AA71FF8EEA300029E58 /* JSONResponseSerializerWithData.h */,
+				04711AA81FF8EEA300029E58 /* JSONResponseSerializerWithData.m */,
+				04711A9B1FF8E9CD00029E58 /* AppConstants.h */,
+				04711A9C1FF8E9CD00029E58 /* AppConstants.m */,
+				04711A9E1FF8E9DB00029E58 /* URLConstants.h */,
+				04711A9F1FF8E9DB00029E58 /* URLConstants.m */,
+				04711AA41FF8ED1000029E58 /* AppError.h */,
+				04711AA51FF8ED1000029E58 /* AppError.m */,
+				04711AAA1FF8EFC800029E58 /* AppUtility.h */,
+				04711AAB1FF8EFC800029E58 /* AppUtility.m */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		3B812C7AD0B2B5EA783564C3 /* Pods */ = {
@@ -217,9 +281,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04711AA61FF8ED1000029E58 /* AppError.m in Sources */,
+				04711A921FF8E4F100029E58 /* Event.m in Sources */,
+				04711AA91FF8EEA300029E58 /* JSONResponseSerializerWithData.m in Sources */,
+				04711AA01FF8E9DB00029E58 /* URLConstants.m in Sources */,
 				042597411FF7A8CF00034E4B /* ViewController.m in Sources */,
+				04711AAC1FF8EFC800029E58 /* AppUtility.m in Sources */,
 				0425974C1FF7A8CF00034E4B /* main.m in Sources */,
 				0425973E1FF7A8CF00034E4B /* AppDelegate.m in Sources */,
+				04711A991FF8E94500029E58 /* SettingsManager.m in Sources */,
+				04711A961FF8E8EF00029E58 /* WebServiceController.m in Sources */,
+				04711A9D1FF8E9CD00029E58 /* AppConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

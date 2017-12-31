@@ -15,4 +15,7 @@ NSString* const kDefaultToken                           = @"";
 NSString* const kTokenKey                               = @"Token";
 
 
+// Service Constants:
+NSString* const kEmailKey                               = @"Email";
+NSString* const kPasswordKey                            = @"Password";
 

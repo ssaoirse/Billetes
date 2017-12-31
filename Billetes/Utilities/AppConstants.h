@@ -15,5 +15,9 @@ FOUNDATION_EXPORT NSString* const kDefaultToken;
 FOUNDATION_EXPORT NSString* const kTokenKey;
 
 
+// Service Constants:
+FOUNDATION_EXPORT NSString* const kEmailKey;
+FOUNDATION_EXPORT NSString* const kPasswordKey;
+
 
 

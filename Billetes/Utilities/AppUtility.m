@@ -7,8 +7,20 @@
 //
 
 #import "AppUtility.h"
+#import "URLConstants.h"
 
 @implementation AppUtility
+
+// Returns the Absolute URL for a service Path.
++(NSString*) getAbsoluteURLForServicePath:(NSString*)servicePath
+{
+    NSString* absoluteURL = nil;
+    // Performing URL escape encoding for handling spaces.
+    NSString* encodedPath = [servicePath stringByAddingPercentEncodingWithAllowedCharacters:
+                             [NSCharacterSet URLPathAllowedCharacterSet]];
+    absoluteURL = [NSString stringWithFormat:@"%@%@",kServerBaseURL,encodedPath];
+    return absoluteURL;
+}
 
 // Returns a non-zero length string value for the specified key, else returns nil.
 +(NSString*) getValidStringObjectForKey:(NSString*)key

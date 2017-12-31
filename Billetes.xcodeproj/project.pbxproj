@@ -25,6 +25,7 @@
 		04711AB31FF8F36A00029E58 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04711AB21FF8F36A00029E58 /* EventViewController.m */; };
 		04711AB61FF8F37A00029E58 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04711AB51FF8F37A00029E58 /* EventDetailViewController.m */; };
 		04711AB91FF8F38B00029E58 /* EventDayToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04711AB81FF8F38B00029E58 /* EventDayToolsViewController.m */; };
+		04711ABC1FF8F44100029E58 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04711ABB1FF8F44100029E58 /* LoginController.m */; };
 		4C5F5685F3A486F10C2C0056 /* libPods-Billetes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F9B369826C63699D65E87B /* libPods-Billetes.a */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,8 @@
 		04711AB51FF8F37A00029E58 /* EventDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
 		04711AB71FF8F38B00029E58 /* EventDayToolsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventDayToolsViewController.h; sourceTree = "<group>"; };
 		04711AB81FF8F38B00029E58 /* EventDayToolsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventDayToolsViewController.m; sourceTree = "<group>"; };
+		04711ABA1FF8F44100029E58 /* LoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		04711ABB1FF8F44100029E58 /* LoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		735A4E91AAF99F26112E08FA /* Pods-Billetes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billetes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Billetes/Pods-Billetes.release.xcconfig"; sourceTree = "<group>"; };
 		92F9B369826C63699D65E87B /* libPods-Billetes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Billetes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7C1113954D528643CA94C7 /* Pods-Billetes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billetes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Billetes/Pods-Billetes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 				04711A951FF8E8EF00029E58 /* WebServiceController.m */,
 				04711A971FF8E94500029E58 /* SettingsManager.h */,
 				04711A981FF8E94500029E58 /* SettingsManager.m */,
+				04711ABA1FF8F44100029E58 /* LoginController.h */,
+				04711ABB1FF8F44100029E58 /* LoginController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 				04711AB61FF8F37A00029E58 /* EventDetailViewController.m in Sources */,
 				04711AAC1FF8EFC800029E58 /* AppUtility.m in Sources */,
 				0425974C1FF7A8CF00034E4B /* main.m in Sources */,
+				04711ABC1FF8F44100029E58 /* LoginController.m in Sources */,
 				0425973E1FF7A8CF00034E4B /* AppDelegate.m in Sources */,
 				04711AB01FF8F35500029E58 /* LoginViewController.m in Sources */,
 				04711A991FF8E94500029E58 /* SettingsManager.m in Sources */,

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Dw-io-R50">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Reveal View Controller-->
+        <scene sceneID="iKW-8p-p9y">
+            <objects>
+                <viewController storyboardIdentifier="SideMenuViewController" id="3Dw-io-R50" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9NK-mB-DLW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="mz0-cM-wk3"/>
+                    </view>
+                    <connections>
+                        <segue destination="K04-Qb-SgV" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="FoF-8A-18T"/>
+                        <segue destination="qz2-Bk-cqh" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="vh6-db-2YZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xdk-mn-xAd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4021" y="-889"/>
+        </scene>
+        <!--Events-->
+        <scene sceneID="Rip-KT-8q6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Events" id="qz2-Bk-cqh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hfy-Ws-8Ym" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3623" y="-410"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="LGa-HR-2Y6">
+            <objects>
+                <viewController id="K04-Qb-SgV" customClass="MenuViewController" customModule="Billetes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sUw-Nq-6yP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="8hu-Fv-3oC">
+                                <rect key="frame" x="0.0" y="0.0" width="315" height="667"/>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.32156862749999998" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="315" id="HP6-3s-02X"/>
+                                </constraints>
+                                <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Billetes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vao-HR-8k5">
+                                    <rect key="frame" x="0.0" y="0.0" width="315" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellMenu" id="ihX-cG-9ED">
+                                        <rect key="frame" x="0.0" y="115.5" width="315" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ihX-cG-9ED" id="zeV-qD-2uH">
+                                            <rect key="frame" x="0.0" y="0.0" width="315" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.23137254900000001" green="0.32156862749999998" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="K04-Qb-SgV" id="D2y-dw-G8M"/>
+                                    <outlet property="delegate" destination="K04-Qb-SgV" id="Jer-Lb-n0G"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8hu-Fv-3oC" firstAttribute="bottom" secondItem="wtX-Ne-r3j" secondAttribute="bottom" id="55E-5u-aby"/>
+                            <constraint firstItem="8hu-Fv-3oC" firstAttribute="top" secondItem="sUw-Nq-6yP" secondAttribute="top" id="Qj9-05-bPX"/>
+                            <constraint firstItem="8hu-Fv-3oC" firstAttribute="leading" secondItem="wtX-Ne-r3j" secondAttribute="leading" id="oL9-YE-JB6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wtX-Ne-r3j"/>
+                    </view>
+                    <connections>
+                        <outlet property="menuTableView" destination="8hu-Fv-3oC" id="29i-V7-ooH"/>
+                        <segue destination="qz2-Bk-cqh" kind="custom" identifier="Events" customClass="SWRevealViewControllerSegueSetController" id="0xG-kG-OEm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vRX-fI-MZ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3199.1999999999998" y="-889.20539730134942"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="0xG-kG-OEm"/>
+    </inferredMetricsTieBreakers>
+</document>

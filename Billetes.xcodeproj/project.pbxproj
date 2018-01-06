@@ -1,0 +1,402 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		046D126F2000FD7500FEFE59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D126E2000FD7500FEFE59 /* AppDelegate.swift */; };
+		046D12712000FD7500FEFE59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D12702000FD7500FEFE59 /* ViewController.swift */; };
+		046D12742000FD7500FEFE59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046D12722000FD7500FEFE59 /* Main.storyboard */; };
+		046D12762000FD7500FEFE59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046D12752000FD7500FEFE59 /* Assets.xcassets */; };
+		046D12792000FD7500FEFE59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046D12772000FD7500FEFE59 /* LaunchScreen.storyboard */; };
+		28D44AA25A72116408DD7B33 /* Pods_Billetes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25FE6DD9035E4FD343589F6 /* Pods_Billetes.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		027FFC864686EDF0F95EB7C2 /* Pods-Billetes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billetes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Billetes/Pods-Billetes.debug.xcconfig"; sourceTree = "<group>"; };
+		046D126B2000FD7500FEFE59 /* Billetes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Billetes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		046D126E2000FD7500FEFE59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		046D12702000FD7500FEFE59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		046D12732000FD7500FEFE59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		046D12752000FD7500FEFE59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		046D12782000FD7500FEFE59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		046D127A2000FD7500FEFE59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A263A224AFA63CFEEFCA39F6 /* Pods-Billetes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billetes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Billetes/Pods-Billetes.release.xcconfig"; sourceTree = "<group>"; };
+		B25FE6DD9035E4FD343589F6 /* Pods_Billetes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Billetes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		046D12682000FD7500FEFE59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28D44AA25A72116408DD7B33 /* Pods_Billetes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		046D12622000FD7500FEFE59 = {
+			isa = PBXGroup;
+			children = (
+				046D126D2000FD7500FEFE59 /* Billetes */,
+				046D126C2000FD7500FEFE59 /* Products */,
+				F5AAF912D861BCC145F61371 /* Pods */,
+				DD4EF1A2206B8D0C82C24928 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		046D126C2000FD7500FEFE59 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				046D126B2000FD7500FEFE59 /* Billetes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		046D126D2000FD7500FEFE59 /* Billetes */ = {
+			isa = PBXGroup;
+			children = (
+				046D126E2000FD7500FEFE59 /* AppDelegate.swift */,
+				046D12702000FD7500FEFE59 /* ViewController.swift */,
+				046D12722000FD7500FEFE59 /* Main.storyboard */,
+				046D12752000FD7500FEFE59 /* Assets.xcassets */,
+				046D12772000FD7500FEFE59 /* LaunchScreen.storyboard */,
+				046D127A2000FD7500FEFE59 /* Info.plist */,
+			);
+			path = Billetes;
+			sourceTree = "<group>";
+		};
+		DD4EF1A2206B8D0C82C24928 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B25FE6DD9035E4FD343589F6 /* Pods_Billetes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5AAF912D861BCC145F61371 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				027FFC864686EDF0F95EB7C2 /* Pods-Billetes.debug.xcconfig */,
+				A263A224AFA63CFEEFCA39F6 /* Pods-Billetes.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		046D126A2000FD7500FEFE59 /* Billetes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 046D127D2000FD7500FEFE59 /* Build configuration list for PBXNativeTarget "Billetes" */;
+			buildPhases = (
+				116C752DEA6B0804CA756A64 /* [CP] Check Pods Manifest.lock */,
+				046D12672000FD7500FEFE59 /* Sources */,
+				046D12682000FD7500FEFE59 /* Frameworks */,
+				046D12692000FD7500FEFE59 /* Resources */,
+				AC4644764257D42A9FE08CCE /* [CP] Embed Pods Frameworks */,
+				DE2FBF0F27A7AFD2D375E6C2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Billetes;
+			productName = Billetes;
+			productReference = 046D126B2000FD7500FEFE59 /* Billetes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		046D12632000FD7500FEFE59 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Gaia Inc";
+				TargetAttributes = {
+					046D126A2000FD7500FEFE59 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 046D12662000FD7500FEFE59 /* Build configuration list for PBXProject "Billetes" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 046D12622000FD7500FEFE59;
+			productRefGroup = 046D126C2000FD7500FEFE59 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				046D126A2000FD7500FEFE59 /* Billetes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		046D12692000FD7500FEFE59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046D12792000FD7500FEFE59 /* LaunchScreen.storyboard in Resources */,
+				046D12762000FD7500FEFE59 /* Assets.xcassets in Resources */,
+				046D12742000FD7500FEFE59 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		116C752DEA6B0804CA756A64 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AC4644764257D42A9FE08CCE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Billetes/Pods-Billetes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE2FBF0F27A7AFD2D375E6C2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Billetes/Pods-Billetes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		046D12672000FD7500FEFE59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046D12712000FD7500FEFE59 /* ViewController.swift in Sources */,
+				046D126F2000FD7500FEFE59 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		046D12722000FD7500FEFE59 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				046D12732000FD7500FEFE59 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		046D12772000FD7500FEFE59 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				046D12782000FD7500FEFE59 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		046D127B2000FD7500FEFE59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		046D127C2000FD7500FEFE59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		046D127E2000FD7500FEFE59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 027FFC864686EDF0F95EB7C2 /* Pods-Billetes.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Billetes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.boletos.Billetes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		046D127F2000FD7500FEFE59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A263A224AFA63CFEEFCA39F6 /* Pods-Billetes.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Billetes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.boletos.Billetes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		046D12662000FD7500FEFE59 /* Build configuration list for PBXProject "Billetes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046D127B2000FD7500FEFE59 /* Debug */,
+				046D127C2000FD7500FEFE59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		046D127D2000FD7500FEFE59 /* Build configuration list for PBXNativeTarget "Billetes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046D127E2000FD7500FEFE59 /* Debug */,
+				046D127F2000FD7500FEFE59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 046D12632000FD7500FEFE59 /* Project object */;
+}

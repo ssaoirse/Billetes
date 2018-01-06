@@ -1,0 +1,15 @@
+PODS:
+  - Alamofire (4.5.1)
+  - TPKeyboardAvoiding (1.3)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - TPKeyboardAvoiding (= 1.3)
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  TPKeyboardAvoiding: a5138f318c06fb3e151f886e18ce4a72695d9cbe
+
+PODFILE CHECKSUM: 80e01f4530d60581d226d402fca37f1c2267fb8c
+
+COCOAPODS: 1.2.1

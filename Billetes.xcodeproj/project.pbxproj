@@ -22,6 +22,7 @@
 		046D129B2001047600FEFE59 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D12992001047600FEFE59 /* MenuViewController.swift */; };
 		046D129C2001047600FEFE59 /* BaseMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D129A2001047600FEFE59 /* BaseMenuViewController.swift */; };
 		046D129D200106E100FEFE59 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046D128A200103AB00FEFE59 /* SWRevealViewController.m */; };
+		046D129F200114BB00FEFE59 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D129E200114BB00FEFE59 /* URLConstants.swift */; };
 		28D44AA25A72116408DD7B33 /* Pods_Billetes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25FE6DD9035E4FD343589F6 /* Pods_Billetes.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		046D12972001046A00FEFE59 /* Base.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Base.storyboard; sourceTree = "<group>"; };
 		046D12992001047600FEFE59 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		046D129A2001047600FEFE59 /* BaseMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMenuViewController.swift; sourceTree = "<group>"; };
+		046D129E200114BB00FEFE59 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		A263A224AFA63CFEEFCA39F6 /* Pods-Billetes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billetes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Billetes/Pods-Billetes.release.xcconfig"; sourceTree = "<group>"; };
 		B25FE6DD9035E4FD343589F6 /* Pods_Billetes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Billetes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -147,6 +149,7 @@
 			children = (
 				046D12932001041800FEFE59 /* Bundle+Extension.swift */,
 				046D12942001041800FEFE59 /* Constants.swift */,
+				046D129E200114BB00FEFE59 /* URLConstants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				046D129D200106E100FEFE59 /* SWRevealViewController.m in Sources */,
+				046D129F200114BB00FEFE59 /* URLConstants.swift in Sources */,
 				046D12922001040A00FEFE59 /* LoginViewController.swift in Sources */,
 				046D12952001041800FEFE59 /* Bundle+Extension.swift in Sources */,
 				046D12712000FD7500FEFE59 /* ViewController.swift in Sources */,

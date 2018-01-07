@@ -15,7 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
         // Override point for customization after application launch.
+        
+        let storyboard = UIStoryboard(name: Constants.kStoryboard_Login, bundle: nil)
+        
+        // instantiate your desired ViewController
+        let rootViewController = storyboard.instantiateViewController(withIdentifier: Constants.kViewController_Login)
+        
+        if let window = self.window {
+            window.rootViewController = rootViewController
+        }
+        
         return true
     }
 

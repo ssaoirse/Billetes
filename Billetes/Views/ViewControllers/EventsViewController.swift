@@ -10,9 +10,16 @@ import UIKit
 
 class EventsViewController: BaseMenuViewController {
 
+    @IBOutlet weak var eventsSegmentedControl: UISegmentedControl!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    
+        self.eventsSegmentedControl.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white],
+                                                           for: UIControlState.normal)
+        self.eventsSegmentedControl.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white],
+                                                           for: UIControlState.selected)
     }
 
     override func didReceiveMemoryWarning() {

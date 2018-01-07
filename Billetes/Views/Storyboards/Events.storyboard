@@ -18,17 +18,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdu-T8-YOs">
-                                <rect key="frame" x="168" y="291.5" width="39" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Cu8-vF-8N4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zsq-t3-X1i">
+                                <rect key="frame" x="15" y="20" width="345" height="41"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="qjt-a2-HpN"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Upcoming event"/>
+                                    <segment title="Past Events"/>
+                                </segments>
+                                <color key="tintColor" red="0.70196078429999997" green="0.14117647059999999" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gi6-be-3zN">
+                                <rect key="frame" x="15" y="75" width="345" height="513"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fdu-T8-YOs" firstAttribute="centerY" secondItem="9bj-RA-ui2" secondAttribute="centerY" id="9aX-Hb-dxe"/>
-                            <constraint firstItem="fdu-T8-YOs" firstAttribute="centerX" secondItem="9bj-RA-ui2" secondAttribute="centerX" id="dYA-0d-5lV"/>
+                            <constraint firstItem="Cu8-vF-8N4" firstAttribute="leading" secondItem="9Lf-w4-ODK" secondAttribute="leading" id="0Cu-Cc-BNA"/>
+                            <constraint firstItem="9Lf-w4-ODK" firstAttribute="trailing" secondItem="gi6-be-3zN" secondAttribute="trailing" constant="15" id="6lb-a9-i55"/>
+                            <constraint firstItem="9Lf-w4-ODK" firstAttribute="bottom" secondItem="gi6-be-3zN" secondAttribute="bottom" constant="15" id="Bg8-EB-l6u"/>
+                            <constraint firstItem="9Lf-w4-ODK" firstAttribute="trailing" secondItem="zsq-t3-X1i" secondAttribute="trailing" constant="15" id="FwK-nX-T6Y"/>
+                            <constraint firstItem="gi6-be-3zN" firstAttribute="top" secondItem="zsq-t3-X1i" secondAttribute="bottom" constant="15" id="K02-D5-ZZR"/>
+                            <constraint firstItem="gi6-be-3zN" firstAttribute="leading" secondItem="9Lf-w4-ODK" secondAttribute="leading" constant="15" id="TIo-ls-Fkl"/>
+                            <constraint firstItem="Cu8-vF-8N4" firstAttribute="bottom" secondItem="9Lf-w4-ODK" secondAttribute="bottom" id="TOF-Qw-4n6"/>
+                            <constraint firstItem="zsq-t3-X1i" firstAttribute="top" secondItem="9Lf-w4-ODK" secondAttribute="top" constant="20" id="eLf-Js-F2x"/>
+                            <constraint firstItem="zsq-t3-X1i" firstAttribute="leading" secondItem="9Lf-w4-ODK" secondAttribute="leading" constant="15" id="gAu-2B-Z4X"/>
+                            <constraint firstItem="Cu8-vF-8N4" firstAttribute="trailing" secondItem="9Lf-w4-ODK" secondAttribute="trailing" id="hSq-nh-j9u"/>
+                            <constraint firstItem="Cu8-vF-8N4" firstAttribute="top" secondItem="9Lf-w4-ODK" secondAttribute="top" id="zfi-4L-2ce"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Lf-w4-ODK"/>
                     </view>
@@ -37,6 +59,9 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="eventsSegmentedControl" destination="zsq-t3-X1i" id="QeE-bW-1Cq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9yA-dc-4NE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,4 +92,7 @@
             <point key="canvasLocation" x="-305" y="132"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="375" height="667"/>
+    </resources>
 </document>

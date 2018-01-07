@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class LoginViewController: UIViewController {
     
@@ -25,10 +26,12 @@ class LoginViewController: UIViewController {
         
         if isValidate() {
             
+            MBProgressHUD.showAdded(to: self.view, animated: true)
             LoginController().loginUser(withEmail: self.usernameTextField.text!, password: self.passwordTextField.text!, success: { (success) in
                 
                 if (success) {
                     
+                    MBProgressHUD.hide(for: self.view, animated: true)
                     let storyboard = UIStoryboard(name: Constants.kStoryboard_Base, bundle: nil)
                     
                     // instantiate your desired ViewController
@@ -41,6 +44,7 @@ class LoginViewController: UIViewController {
                     }
                 }
                 else {
+                    MBProgressHUD.hide(for: self.view, animated: true)
                     let alerView = UIAlertController.init(title: Bundle().displayName,
                                                           message: "Failed from server side, need message for same.",
                                                           preferredStyle: UIAlertControllerStyle.alert)

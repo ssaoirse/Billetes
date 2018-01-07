@@ -21,7 +21,6 @@
 		046D12982001046A00FEFE59 /* Base.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046D12972001046A00FEFE59 /* Base.storyboard */; };
 		046D129B2001047600FEFE59 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D12992001047600FEFE59 /* MenuViewController.swift */; };
 		046D129C2001047600FEFE59 /* BaseMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D129A2001047600FEFE59 /* BaseMenuViewController.swift */; };
-		046D129D200106E100FEFE59 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046D128A200103AB00FEFE59 /* SWRevealViewController.m */; };
 		046D129F200114BB00FEFE59 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D129E200114BB00FEFE59 /* URLConstants.swift */; };
 		046D12A1200117A400FEFE59 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D12A0200117A400FEFE59 /* LoginController.swift */; };
 		28D44AA25A72116408DD7B33 /* Pods_Billetes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25FE6DD9035E4FD343589F6 /* Pods_Billetes.framework */; };
@@ -36,9 +35,6 @@
 		046D12752000FD7500FEFE59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		046D12782000FD7500FEFE59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		046D127A2000FD7500FEFE59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		046D1288200103AA00FEFE59 /* Billetes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Billetes-Bridging-Header.h"; sourceTree = "<group>"; };
-		046D1289200103AB00FEFE59 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		046D128A200103AB00FEFE59 /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		046D128B2001040000FEFE59 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		046D128C2001040000FEFE59 /* Events.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		046D128F2001040900FEFE59 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
@@ -160,19 +156,8 @@
 		046D12862001020200FEFE59 /* Thirdparty */ = {
 			isa = PBXGroup;
 			children = (
-				046D12872001035F00FEFE59 /* MenuLib */,
 			);
 			path = Thirdparty;
-			sourceTree = "<group>";
-		};
-		046D12872001035F00FEFE59 /* MenuLib */ = {
-			isa = PBXGroup;
-			children = (
-				046D1289200103AB00FEFE59 /* SWRevealViewController.h */,
-				046D128A200103AB00FEFE59 /* SWRevealViewController.m */,
-				046D1288200103AA00FEFE59 /* Billetes-Bridging-Header.h */,
-			);
-			path = MenuLib;
 			sourceTree = "<group>";
 		};
 		DD4EF1A2206B8D0C82C24928 /* Frameworks */ = {
@@ -320,7 +305,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				046D12A1200117A400FEFE59 /* LoginController.swift in Sources */,
-				046D129D200106E100FEFE59 /* SWRevealViewController.m in Sources */,
 				046D129F200114BB00FEFE59 /* URLConstants.swift in Sources */,
 				046D12922001040A00FEFE59 /* LoginViewController.swift in Sources */,
 				046D12952001041800FEFE59 /* Bundle+Extension.swift in Sources */,
@@ -473,7 +457,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.boletos.Billetes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Billetes/Thirdparty/MenuLib/Billetes-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -489,9 +472,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Billetes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[arch=*]" = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.boletos.Billetes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Billetes/Thirdparty/MenuLib/Billetes-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

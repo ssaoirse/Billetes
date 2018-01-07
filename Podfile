@@ -8,5 +8,7 @@ target 'Billetes' do
 	# Pods for Billetes
 	pod 'TPKeyboardAvoiding', '1.3' 
 	pod 'Alamofire', '~> 4.5'
+	pod 'SWRevealViewController', '~> 2.3.0'
+	pod 'MBProgressHUD', '~> 1.0.0'
 
 end

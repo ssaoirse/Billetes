@@ -25,16 +25,29 @@ class LoginViewController: UIViewController {
         
         if isValidate() {
             
-            let storyboard = UIStoryboard(name: Constants.kStoryboard_Base, bundle: nil)
-            
-            // instantiate your desired ViewController
-            let rootViewController =
-                storyboard.instantiateViewController(withIdentifier: Constants.kViewController_Base)
-            
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            if let window = appDelegate.window {
-                window.rootViewController = rootViewController
-            }
+            LoginController().loginUser(withEmail: self.usernameTextField.text!, password: self.passwordTextField.text!, success: { (success) in
+                
+                if (success) {
+                    
+                    let storyboard = UIStoryboard(name: Constants.kStoryboard_Base, bundle: nil)
+                    
+                    // instantiate your desired ViewController
+                    let rootViewController =
+                        storyboard.instantiateViewController(withIdentifier: Constants.kViewController_Base)
+                    
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    if let window = appDelegate.window {
+                        window.rootViewController = rootViewController
+                    }
+                }
+                else {
+                    let alerView = UIAlertController.init(title: Bundle().displayName,
+                                                          message: "Failed from server side, need message for same.",
+                                                          preferredStyle: UIAlertControllerStyle.alert)
+                    alerView.addAction(UIAlertAction(title: Constants.kAlert_OK, style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alerView, animated: true, completion: nil)
+                }
+            })
         }
     }
     

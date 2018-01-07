@@ -10,5 +10,6 @@ target 'Billetes' do
 	pod 'Alamofire', '~> 4.5'
 	pod 'SWRevealViewController', '~> 2.3.0'
 	pod 'MBProgressHUD', '~> 1.0.0'
+	pod 'SwiftyJSON', '~> 4.0.0'
 
 end

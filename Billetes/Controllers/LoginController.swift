@@ -7,6 +7,7 @@
 //
 
 import Alamofire
+import SwiftyJSON
 
 class LoginController: NSObject {
     
@@ -30,6 +31,10 @@ class LoginController: NSObject {
                           encoding: JSONEncoding.default,
                           headers: headers)
         .responseJSON { response in
+            if((response.result.value) != nil) {
+                let swiftyJsonVar = JSON(response.result.value!)
+                print(swiftyJsonVar)
+            }
             if let result = response.result.value {
                 print(result)
             }

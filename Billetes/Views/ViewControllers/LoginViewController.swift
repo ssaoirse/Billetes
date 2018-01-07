@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
         if isValidate() {
             
             MBProgressHUD.showAdded(to: self.view, animated: true)
-            LoginController().loginUser(withEmail: self.usernameTextField.text!, password: self.passwordTextField.text!, success: { (success) in
+            LoginController().loginUser(withEmail: self.usernameTextField.text!, password: self.passwordTextField.text!, success: { (success, message) in
                 
                 if (success) {
                     
@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
                 else {
                     MBProgressHUD.hide(for: self.view, animated: true)
                     let alerView = UIAlertController.init(title: Bundle().displayName,
-                                                          message: "Failed from server side, need message for same.",
+                                                          message: message,
                                                           preferredStyle: UIAlertControllerStyle.alert)
                     alerView.addAction(UIAlertAction(title: Constants.kAlert_OK, style: UIAlertActionStyle.default, handler: nil))
                     self.present(alerView, animated: true, completion: nil)

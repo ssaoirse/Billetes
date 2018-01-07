@@ -41,6 +41,9 @@ struct Constants {
     // MARK: -
     // MARK: App Settings -
     static let kLoggedInKey = "loggedIn"
+    static let kUser_IdKey = "user_id"
+    static let kTokenKey = "token"
+    
     
     
 }

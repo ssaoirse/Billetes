@@ -9,14 +9,18 @@
 import Alamofire
 import SwiftyJSON
 
+// Controller class to perform login and logout service and data handling.
 class LoginController: NSObject {
     
-    // TODO:
-    // Refactor into proper success and failure..
-    // Store the User Id and token.
-    func loginUser(withEmail email: String, password: String, success:@escaping (Bool) ->()){
+    // Perform login service and save the user id and token on success.
+    // Return status and error message if any.
+    func loginUser(withEmail email: String,
+                   password: String,
+                   success:@escaping (Bool, String?) ->()){
+        
         // Set service path.
         let servicePath = URLConstants.kServerBaseURL + URLConstants.kLoginServicePath
+        
         // Set request parameters.
         let params: Parameters = [URLConstants.kEmailKey: email,
                                   URLConstants.kPasswordKey: password]
@@ -31,20 +35,31 @@ class LoginController: NSObject {
                           encoding: JSONEncoding.default,
                           headers: headers)
         .responseJSON { response in
-            if((response.result.value) != nil) {
-                let swiftyJsonVar = JSON(response.result.value!)
-                print(swiftyJsonVar)
-            }
-            if let result = response.result.value {
-                print(result)
-            }
+            
+            // Check for success in response.
             if (response.result.isSuccess) {
-                // Update the loggedIn status in persistence storage.
-                Settings.sharedInstance.setLoggedIn(status: true)
-                success(true)
+                if response.result.value != nil  {
+                    // parse json.
+                    let json = JSON(response.result.value!)
+                    
+                    // Read token and user id.
+                    let userId = json[Constants.kUser_IdKey].stringValue
+                    let token = json[Constants.kTokenKey].stringValue
+                    
+                    // Update the loggedIn status in persistence storage.
+                    Settings.sharedInstance.setLoggedIn(status: true)
+                    Settings.sharedInstance.setLoginInfo(userId: userId, token: token)
+                    
+                    // notify success.
+                    success(true, nil)
+                }
             }
             else {
-                success(false)
+                if let statusCode = response.response?.statusCode {
+                    print(statusCode)
+                }
+                // notify error.
+                success(false, response.error?.localizedDescription)
             }
         }
     }

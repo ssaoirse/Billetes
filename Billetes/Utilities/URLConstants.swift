@@ -18,4 +18,9 @@ struct URLConstants {
     // MARK: ServicePaths -
     static let kLoginServicePath                = "/boletoexpress-api/public/login"
     static let kLogoutServicePath               = "/boletoexpress-api/public/logout"
+    
+    // MARK: -
+    // MARK: - Request Parameters:
+    static let kEmailKey                        = "Email"
+    static let kPasswordKey                     = "Password"
 }

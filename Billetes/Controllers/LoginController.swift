@@ -10,7 +10,9 @@ import Alamofire
 
 class LoginController: NSObject {
     
-    // TODO: Refactor.
+    // TODO:
+    // Refactor into proper success and failure..
+    // Store the User Id and token.
     func loginUser(withEmail email: String, password: String, success:@escaping (Bool) ->()){
         // Set service path.
         let servicePath = URLConstants.kServerBaseURL + URLConstants.kLoginServicePath
@@ -32,6 +34,8 @@ class LoginController: NSObject {
                 print(result)
             }
             if (response.result.isSuccess) {
+                // Update the loggedIn status in persistence storage.
+                Settings.sharedInstance.setLoggedIn(status: true)
                 success(true)
             }
             else {

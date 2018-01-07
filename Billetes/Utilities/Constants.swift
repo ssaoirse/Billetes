@@ -37,4 +37,10 @@ struct Constants {
     static let kAlert_WrongEmail = "Please enter valid Username."
     static let kAlert_ContainsWhitespace = "Username or password should not contain any whitespace."
     static let kAlert_OK = "OK"
+    
+    // MARK: -
+    // MARK: App Settings -
+    static let kLoggedInKey = "loggedIn"
+    
+    
 }

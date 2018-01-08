@@ -34,14 +34,14 @@ class Settings {
     // MARK:- Login Info -
     
     // Returns the Login Info.
-    func getLoginInfo() -> (userId: String?, token: String?) {
-        let userId = UserDefaults.standard.string(forKey: Constants.kUser_IdKey)
+    func getLoginInfo() -> (userId: Int?, token: String?) {
+        let userId = UserDefaults.standard.integer(forKey: Constants.kUser_IdKey)
         let token = UserDefaults.standard.string(forKey: Constants.kTokenKey)
         return (userId,token)
     }
     
     // Set the user Id and the access token.
-    func setLoginInfo(userId: String, token: String) -> Void {
+    func setLoginInfo(userId: Int, token: String) -> Void {
         UserDefaults.standard.set(userId, forKey: Constants.kUser_IdKey)
         UserDefaults.standard.set(token, forKey: Constants.kTokenKey)
         UserDefaults.standard.synchronize()
@@ -54,7 +54,7 @@ class Settings {
             return
         }
         UserDefaults.standard.set(false, forKey: Constants.kLoggedInKey)
-        UserDefaults.standard.set("", forKey: Constants.kUser_IdKey)
+        UserDefaults.standard.set(-1, forKey: Constants.kUser_IdKey)
         UserDefaults.standard.set("", forKey: Constants.kTokenKey)
         UserDefaults.standard.synchronize()
     }

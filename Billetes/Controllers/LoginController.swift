@@ -43,7 +43,7 @@ class LoginController: NSObject {
                     let json = JSON(response.result.value!)
                     
                     // Read token and user id.
-                    let userId = json[Constants.kUser_IdKey].stringValue
+                    let userId = json[Constants.kUser_IdKey].intValue
                     let token = json[Constants.kTokenKey].stringValue
                     
                     // Update the loggedIn status in persistence storage.

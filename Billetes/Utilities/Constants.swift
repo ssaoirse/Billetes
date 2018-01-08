@@ -44,6 +44,12 @@ struct Constants {
     static let kUser_IdKey = "user_id"
     static let kTokenKey = "token"
     
+    // MARK: - Events -
+    static let kEvent_IdKey = "event_id"
+    static let kNameKey = "name"
+    static let kThumbnail_UrlKey = "thumbnail_url"
+    static let kDatetimeKey = "datetime"
+    static let kDatetimeFormatyyyyMMddHHmmss = "yyyy-MM-dd HH:mm:ss"
     
     
 }

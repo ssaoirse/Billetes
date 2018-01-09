@@ -51,5 +51,12 @@ struct Constants {
     static let kDatetimeKey = "datetime"
     static let kDatetimeFormatyyyyMMddHHmmss = "yyyy-MM-dd HH:mm:ss"
     
+    // MARK: - Event Details -
+    static let kLocationKey = "location"
+    static let kSoldKey = "sold"
+    static let kTicketsKey = "tickets"
+    static let kAvailableKey = "available"
+    static let kAmountKey = "amount"
+    
     
 }

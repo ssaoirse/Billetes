@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-// Data model for Event.
+// MARK:- Event -
 struct Event {
     let eventId: Int
     let name: String
@@ -25,7 +25,8 @@ struct Event {
     }
 }
 
-// Data model for Event Details:
+
+// MARK:- Event Detail -
 struct EventDetail {
     let eventId: Int
     let name: String
@@ -49,8 +50,32 @@ struct EventDetail {
         self.location = location
         self.thumbnailURL = thumbnailURL
     }
-    
 }
+
+
+// MARK:- Event Day Tools -
+struct EventDayTools {
+    let eventId: Int
+    let name: String
+    let location: String
+    let datetime: Date
+    let checkedIn: Int
+    let notCheckedIn: Int
+    
+    // Intializer.
+    init(eventId: Int, name: String, location: String, datetime: Date, checkedIn: Int, notCheckedIn: Int ) {
+        self.eventId = eventId
+        self.name = name
+        self.datetime = datetime
+        self.location = location
+        self.checkedIn = checkedIn
+        self.notCheckedIn = notCheckedIn
+    }
+}
+
+
+
+
 
 
 

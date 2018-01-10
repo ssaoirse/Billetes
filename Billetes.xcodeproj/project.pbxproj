@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0409DCEB200695180057D848 /* Attendee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409DCEA200695180057D848 /* Attendee.swift */; };
 		043AA9CD2003C52D005B1CBC /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043AA9CC2003C52D005B1CBC /* EventsController.swift */; };
 		043AA9CF2003CB5C005B1CBC /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043AA9CE2003CB5C005B1CBC /* Event.swift */; };
 		043AA9D12003E1ED005B1CBC /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043AA9D02003E1ED005B1CBC /* DateFormatter+Extension.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		027FFC864686EDF0F95EB7C2 /* Pods-Billetes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billetes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Billetes/Pods-Billetes.debug.xcconfig"; sourceTree = "<group>"; };
+		0409DCEA200695180057D848 /* Attendee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendee.swift; sourceTree = "<group>"; };
 		043AA9CC2003C52D005B1CBC /* EventsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
 		043AA9CE2003CB5C005B1CBC /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		043AA9D02003E1ED005B1CBC /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				043AA9CE2003CB5C005B1CBC /* Event.swift */,
+				0409DCEA200695180057D848 /* Attendee.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0409DCEB200695180057D848 /* Attendee.swift in Sources */,
 				046D12A1200117A400FEFE59 /* LoginController.swift in Sources */,
 				046D129F200114BB00FEFE59 /* URLConstants.swift in Sources */,
 				046D12922001040A00FEFE59 /* LoginViewController.swift in Sources */,

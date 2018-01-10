@@ -37,47 +37,54 @@ class EventsController: NSObject {
             
             // Check for success in response.
             if (response.result.isSuccess) {
-                if response.result.value != nil  {
-                    // Initialize the array to be returned.
-                    var events = [Event]()
-                    let dateFormatter = DateFormatter()
-                    // parse json.
-                    let json = JSON(response.result.value!)
-                    for item in json.arrayValue {
-                        // TODO: Refactor.
-                        let eventId = item[Constants.kEvent_IdKey].intValue
-                        let name = item[Constants.kNameKey].stringValue
-                        let thumbnail = item[Constants.kThumbnail_UrlKey].stringValue
-                        let datestring = item[Constants.kDatetimeKey].stringValue
-                        let datetime = dateFormatter.date(fromString: datestring,
-                                                          format: Constants.kDatetimeFormatyyyyMMddHHmmss)
-                        let event = Event(eventId: eventId,
-                                          name: name,
-                                          datetime: datetime!,
-                                          thumbnailURL: thumbnail)
-                        events.append(event)
-                    }
-                    
-                    // Filter the list of events based on current date as upcoming and
-                    // Upcoming events.
-                    let today = Date()
-                    let upcomingEvents = events.filter(){
-                        $0.datetime >= today
-                    }
-                    
-                    // past events.
-                    let pastEvents = events.filter(){
-                        $0.datetime < today
-                    }
-                    
-                    // notify success.
-                    success(upcomingEvents, pastEvents)
+                
+                // parse json.
+                let json = JSON(response.result.value!)
+                // TODO: Encapsulate status and message into the service response.
+                let status = json[Constants.kStatusKey].intValue
+                let message = json[Constants.kMessageKey].stringValue
+                if status != 200 {
+                    // notify error.
+                    failure(message)
+                    return
                 }
+                
+                // Initialize the array to be returned.
+                var events = [Event]()
+                let dateFormatter = DateFormatter()
+                
+                for item in json[Constants.kDataKey].arrayValue {
+                    // TODO: Refactor.
+                    let eventId = item[Constants.kEvent_IdKey].intValue
+                    let name = item[Constants.kNameKey].stringValue
+                    let thumbnail = item[Constants.kThumbnail_UrlKey].stringValue
+                    let datestring = item[Constants.kDatetimeKey].stringValue
+                    let datetime = dateFormatter.date(fromString: datestring,
+                                                      format: Constants.kDatetimeFormatyyyyMMddHHmmss)
+                    let event = Event(eventId: eventId,
+                                      name: name,
+                                      datetime: datetime!,
+                                      thumbnailURL: thumbnail)
+                    events.append(event)
+                }
+                
+                // Filter the list of events based on current date as upcoming and
+                // Upcoming events.
+                let today = Date()
+                let upcomingEvents = events.filter(){
+                    $0.datetime >= today
+                }
+                
+                // past events.
+                let pastEvents = events.filter(){
+                    $0.datetime < today
+                }
+                
+                // notify success.
+                success(upcomingEvents, pastEvents)
+                
             }
             else {
-                if let statusCode = response.response?.statusCode {
-                    print(statusCode)
-                }
                 // notify error.
                 failure(response.error?.localizedDescription)
             }
@@ -87,7 +94,7 @@ class EventsController: NSObject {
 
     // Returns the event details for the specified event Id.
     func getDetails(for eventId: Int,
-                    success:@escaping (Bool) ->(),
+                    success:@escaping (EventDetail) ->(),
                     failure:@escaping (String?)->()) {
         // Set service path.
         let loginInfo = Settings.sharedInstance.getLoginInfo()
@@ -109,47 +116,181 @@ class EventsController: NSObject {
             
             // Check for success in response.
             if (response.result.isSuccess) {
-                if response.result.value != nil  {
-                    // TODO: Response not expected in an array, but a single dictionary.
-                    // parse json.
-                    let json = JSON(response.result.value!)
-                    for item in json.arrayValue {
-                        let eventId = item[Constants.kEvent_IdKey].intValue
-                        let name = item[Constants.kNameKey].stringValue
-                        let ticketsSold = item[Constants.kSoldKey].intValue
-                        let ticketsAvailable = item[Constants.kAvailableKey].intValue
-                        let totalTickets = item[Constants.kTicketsKey].intValue
-                        let totalAmount = item[Constants.kAmountKey].doubleValue
-                        let thumbnailURL = item[Constants.kThumbnail_UrlKey].string
-                        let location = item[Constants.kLocationKey].string
-                        
-                        // TODO: handle datetime.
-                        let dateFormatter = DateFormatter()
-                        let datestring = item[Constants.kDatetimeKey].stringValue
-                        let datetime = dateFormatter.date(fromString: datestring,
-                                                          format: Constants.kDatetimeFormatyyyyMMddHHmmss)
-                        
-                        let eventDetail = EventDetail(eventId: eventId,
-                                                      name: name,
-                                                      datetime: datetime!,
-                                                      ticketsSold: ticketsSold,
-                                                      ticketsAvailable: ticketsAvailable,
-                                                      totalTickets: totalTickets,
-                                                      totalAmount: totalAmount,
-                                                      location: location,
-                                                      thumbnailURL: thumbnailURL)
-                        print(eventDetail)
-                        
-                        // notify success.
-                        success(true)
-                        return
-                    }
+                
+                // parse json.
+                let json = JSON(response.result.value!)
+                // TODO: Encapsulate status and message into the service response.
+                let status = json[Constants.kStatusKey].intValue
+                let message = json[Constants.kMessageKey].stringValue
+                if status != 200 {
+                    // notify error.
+                    failure(message)
+                    return
                 }
+                
+                // Parse event details.
+                let eventId = json[Constants.kDataKey][Constants.kEvent_IdKey].intValue
+                let name = json[Constants.kDataKey][Constants.kNameKey].stringValue
+                let ticketsSold = json[Constants.kDataKey][Constants.kSoldKey].intValue
+                let ticketsAvailable = json[Constants.kDataKey][Constants.kAvailableKey].intValue
+                let totalTickets = json[Constants.kDataKey][Constants.kTicketsKey].intValue
+                let totalAmount = json[Constants.kDataKey][Constants.kAmountKey].doubleValue
+                let thumbnailURL = json[Constants.kDataKey][Constants.kThumbnail_UrlKey].string
+                let location = json[Constants.kDataKey][Constants.kLocationKey].string
+                
+                // TODO: handle datetime.
+                let dateFormatter = DateFormatter()
+                let datestring = json[Constants.kDataKey][Constants.kDatetimeKey].stringValue
+                let datetime = dateFormatter.date(fromString: datestring,
+                                                  format: Constants.kDatetimeFormatyyyyMMddHHmmss)
+                
+                let eventDetail = EventDetail(eventId: eventId,
+                                              name: name,
+                                              datetime: datetime!,
+                                              ticketsSold: ticketsSold,
+                                              ticketsAvailable: ticketsAvailable,
+                                              totalTickets: totalTickets,
+                                              totalAmount: totalAmount,
+                                              location: location,
+                                              thumbnailURL: thumbnailURL)
+                
+                // notify success.
+                success(eventDetail)
+                return
             }
             else {
-                if let statusCode = response.response?.statusCode {
-                    print(statusCode)
+                // notify error.
+                failure(response.error?.localizedDescription)
+            }
+        }
+    }
+    
+    
+    // Event Day Tools:
+    func getEventDayTools(for eventId: Int,
+                          success:@escaping (EventDayTools) ->(),
+                          failure:@escaping (String?)->()) {
+        // Set service path.
+        let loginInfo = Settings.sharedInstance.getLoginInfo()
+        
+        // Set request parameters.
+        var headers = [String: String]()
+        headers["Content-Type"] = "application/json"
+        headers[Constants.kTokenKey] = loginInfo.token
+        
+        let servicePath = URLConstants.kServerBaseURL +
+            String(format: URLConstants.kEventDayToolsServicePath, loginInfo.userId!, eventId)
+        
+        // Initiate request.
+        Alamofire.request(servicePath,
+                          method: .get,
+                          encoding: JSONEncoding.default,
+                          headers: headers)
+        .responseJSON { response in
+            
+            // Check for success in response.
+            if (response.result.isSuccess) {
+                // parse json.
+                let json = JSON(response.result.value!)
+                
+                // TODO: Encapsulate status and message into the service response.
+                let status = json[Constants.kStatusKey].intValue
+                let message = json[Constants.kMessageKey].stringValue
+                if status != 200 {
+                    // notify error.
+                    failure(message)
+                    return
                 }
+                
+                // Parse event details.
+                let eventId = json[Constants.kDataKey][Constants.kEvent_IdKey].intValue
+                let name = json[Constants.kDataKey][Constants.kNameKey].stringValue
+                let checkedIn = json[Constants.kDataKey][Constants.kCheckedInKey].intValue
+                let notCheckedIn = json[Constants.kDataKey][Constants.kNotCheckedInKey].intValue
+                let location = json[Constants.kDataKey][Constants.kLocationKey].stringValue
+                
+                // TODO: handle datetime.
+                let dateFormatter = DateFormatter()
+                let datestring = json[Constants.kDataKey][Constants.kDatetimeKey].stringValue
+                let datetime = dateFormatter.date(fromString: datestring,
+                                                  format: Constants.kDatetimeFormatyyyyMMddHHmmss)
+                let eventDayTools = EventDayTools(eventId: eventId,
+                                                  name: name,
+                                                  location: location,
+                                                  datetime: datetime!,
+                                                  checkedIn: checkedIn,
+                                                  notCheckedIn: notCheckedIn)
+                
+                // notify success.
+                success(eventDayTools)
+                return
+            }
+            else {
+                // notify error.
+                failure(response.error?.localizedDescription)
+            }
+        }
+    }
+    
+    
+    // Attendee List:
+    func getAttendees(for eventId: Int,
+                      success:@escaping ([Attendee]) ->(),
+                      failure:@escaping (String?)->()) {
+        // Set service path.
+        let loginInfo = Settings.sharedInstance.getLoginInfo()
+        
+        // Set request parameters.
+        var headers = [String: String]()
+        headers["Content-Type"] = "application/json"
+        headers[Constants.kTokenKey] = loginInfo.token
+        
+        let servicePath = URLConstants.kServerBaseURL +
+            String(format: URLConstants.kAttendeeListServicePath, loginInfo.userId!, eventId)
+        
+        // Initiate request.
+        Alamofire.request(servicePath,
+                          method: .get,
+                          encoding: JSONEncoding.default,
+                          headers: headers)
+        .responseJSON { response in
+            
+            // Check for success in response.
+            if (response.result.isSuccess) {
+                // parse json.
+                let json = JSON(response.result.value!)
+                
+                // TODO: Encapsulate status and message into the service response.
+                let status = json[Constants.kStatusKey].intValue
+                let message = json[Constants.kMessageKey].stringValue
+                if status != 200 {
+                    // notify error.
+                    failure(message)
+                    return
+                }
+                
+                // Initialize the array to be returned.
+                var attendees = [Attendee]()
+                for item in json[Constants.kDataKey].arrayValue {
+                    // TODO: Refactor.
+                    let name = item[Constants.kNameKey].stringValue
+                    let ticketNumber = item[Constants.kTicketNumKey].stringValue
+                    let admissionStatus = item[Constants.kAdmissionStatusKey].stringValue
+                    let isCheckedIn = item[Constants.kAdmissionStatusKey].boolValue
+                    let email = item[Constants.kEmailKey].string
+                    
+                    let attendee = Attendee(name: name,
+                                            ticketNumber: ticketNumber,
+                                            isCheckedIn: isCheckedIn,
+                                            admissionStatus: admissionStatus,
+                                            email: email)
+                    attendees.append(attendee)
+                }
+                // notify success.
+                success(attendees)
+                return
+            }
+            else {
                 // notify error.
                 failure(response.error?.localizedDescription)
             }

@@ -44,6 +44,18 @@ struct Constants {
     static let kUser_IdKey = "user_id"
     static let kTokenKey = "token"
     
+    // MARK: - Request Parameters -
+    static let kEmailKey  = "email"
+    static let kPasswordKey = "password"
+    
+    // MARK: - Service Response -
+    // Indicates the response status, Int 200, 201 should be treated as success.
+    static let kStatusKey = "status"
+    // The success/error message to be displayed to the User.
+    static let kMessageKey = "message"
+    // The Data dictionary containing the content for the service.
+    static let kDataKey = "data"
+    
     // MARK: - Events -
     static let kEvent_IdKey = "event_id"
     static let kNameKey = "name"
@@ -58,5 +70,12 @@ struct Constants {
     static let kAvailableKey = "available"
     static let kAmountKey = "amount"
     
+    // MARK: - Event Day Tools -
+    static let kCheckedInKey = "checked-in"
+    static let kNotCheckedInKey = "not-checked-in"
     
+    // MARK: - Attendee -
+    static let kIsCheckedInKey = "is_checked_in"
+    static let kTicketNumKey = "ticket_num"
+    static let kAdmissionStatusKey = "admission_status"
 }

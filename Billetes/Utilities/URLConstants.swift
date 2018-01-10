@@ -23,7 +23,9 @@ struct URLConstants {
     // /newsite/api/public/event/{user_id}/{event_id}
     static let kEventDetailsServicePath         = "/newsite/api/public/event/%d/%d"
     
-    // MARK: - Request Parameters -
-    static let kEmailKey                        = "email"
-    static let kPasswordKey                     = "password"
+    // /newsite/api/public/event_day_tools/{user_id}/{event_id}
+    static let kEventDayToolsServicePath        = "/newsite/api/public/event_day_tools/%d/%d"
+    
+    // /newsite/api/public/attendee_list/{user_id}/{event_id}
+    static let kAttendeeListServicePath         = "/newsite/api/public/attendee_list/%d/%d"
 }

@@ -28,4 +28,8 @@ struct URLConstants {
     
     // /newsite/api/public/attendee_list/{user_id}/{event_id}
     static let kAttendeeListServicePath         = "/newsite/api/public/attendee_list/%d/%d"
+    
+    // /newsite/api/public/checkin
+    static let kAttendeeCheckinServicePath      = "/newsite/api/public/checkin"
+    
 }

@@ -21,7 +21,10 @@ class EventsViewController: BaseMenuViewController {
         self.eventsSegmentedControl.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white],
                                                            for: UIControlState.selected)
         //fetchEvents()
-        fetchEventDetails()
+        //fetchEventDetails()
+        //fetchEventDayTools()
+        //fetchAttendees()
+        //checkinAttendee()
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,10 +53,45 @@ class EventsViewController: BaseMenuViewController {
     func fetchEventDetails() -> Void {
         let eventsController = EventsController()
         eventsController.getDetails(for: 50773,
-        success: { (success) in
-        
+        success: { (eventDetail) in
+            print(eventDetail)
         },
         failure: { (message) in
+            
+        })
+    }
+    
+    
+    func fetchEventDayTools() -> Void {
+        let eventsController = EventsController()
+        eventsController.getEventDayTools(for: 50773,
+        success: { (eventDayTools) in
+            print(eventDayTools)
+        },
+        failure: { (message) in
+        
+        })
+        
+    }
+    
+    func fetchAttendees() -> Void {
+        let eventsController = EventsController()
+        eventsController.getAttendees(for: 50235,
+        success: { (attendees) in
+            print("Attendees Count: ",attendees.count)
+            print(attendees)
+        },
+        failure: { (message) in
+        
+        })
+    }
+    
+    func checkinAttendee() {
+        let eventsController = EventsController()
+        eventsController.checkinAttendee(with: "1032955",
+                                         email: "johnjmaloney@gmail.com",
+                                         status: true,
+        completion: { (success, message) in
             
         })
     }

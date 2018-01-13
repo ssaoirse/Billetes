@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class EventsTableViewCell: UITableViewCell {
 
@@ -31,6 +32,32 @@ class EventsTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    // Set up cell properties for event.
+    func configureCell(with event: Event) -> Void {
+        self.selectionStyle = UITableViewCellSelectionStyle.none
+        
+        Alamofire.request(event.thumbnailURL!).response { response in
+            if let data = response.data {
+                let image = UIImage(data: data)
+                self.eventImageView.image = image
+            } else {
+                //TODO: assign no photo image.
+            }
+        }
+        
+        self.eventNameLabel.text = event.name
+        
+        // Format the date
+        let formatter = DateFormatter()
+        
+        //set the date format whhich needs to be displayed
+        formatter.dateFormat = "EEEE, MMMM dd, yyyy, hh:mm a"
+        
+        // convert date to string
+        let displayDateString = formatter.string(from: event.datetime)
+        self.eventDateTimeLabel.text = displayDateString
     }
 
 }

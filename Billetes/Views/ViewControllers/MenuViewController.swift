@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class MenuViewController: UIViewController {
     
@@ -48,17 +49,43 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             self.performSegue(withIdentifier: Constants.kViewController_Events, sender: self)
         case 1:
-            let storyboard = UIStoryboard(name: Constants.kStoryboard_Login, bundle: nil)
-            
-            // instantiate your desired ViewController
-            let rootViewController = storyboard.instantiateViewController(withIdentifier: Constants.kViewController_Login)
-            
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            if let window = appDelegate.window {
-                window.rootViewController = rootViewController
-            }
+            self.logoutUser()
         default:
             self.performSegue(withIdentifier: Constants.kViewController_Base, sender: self)
         }        
+    }
+    
+    
+    // Logout:
+    func logoutUser() {
+        let loginController = LoginController()
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        loginController.logoutUser { (success, message) in
+            MBProgressHUD.hide(for: self.view, animated: true)
+            
+            // navigate to login screen.
+            if(success) {
+                let storyboard = UIStoryboard(name: Constants.kStoryboard_Login, bundle: nil)
+                
+                // instantiate your desired ViewController
+                let rootViewController = storyboard.instantiateViewController(withIdentifier: Constants.kViewController_Login)
+                
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                if let window = appDelegate.window {
+                    window.rootViewController = rootViewController
+                }
+            }
+            else {
+                if let msg = message {
+                    let alertView = UIAlertController.init(title: Bundle().displayName,
+                                                           message: msg,
+                                                           preferredStyle: UIAlertControllerStyle.alert)
+                    alertView.addAction(UIAlertAction(title: Constants.kAlert_OK,
+                                                      style: UIAlertActionStyle.default,
+                                                      handler: nil))
+                    self.present(alertView, animated: true, completion: nil)
+                }
+            }
+        }
     }
 }

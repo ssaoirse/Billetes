@@ -139,43 +139,16 @@ extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.kEventCellIdentifier, for: indexPath)
-            as! EventsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.kEventCellIdentifier,
+                                                 for: indexPath) as! EventsTableViewCell
         
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
-        
-        Alamofire.request(pastEventsArray[indexPath.row].thumbnailURL!).response { response in
-            if let data = response.data {
-                let image = UIImage(data: data)
-                cell.eventImageView.image = image
-            } else {
-                //TODO: assign no photo image.
-            }
+        // configure cell based on selected segment.
+        if (self.eventsSegmentedControl.selectedSegmentIndex == 0) {
+            cell.configureCell(with: upcomingEventsArray[indexPath.row]);
         }
-        
-        // will remove this line after some testing
-        // cell.eventImageView.imageFromUrl(urlString: pastEventsArray[indexPath.row].thumbnailURL!)
-        
-        cell.eventNameLabel.text = pastEventsArray[indexPath.row].name
-        
-        let formatter = DateFormatter()
-        
-        // set the format coming in service
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        
-        let dateString = formatter.string(from: pastEventsArray[indexPath.row].datetime)
-        
-        // convert string to date
-        let date = formatter.date(from: dateString)
-        
-        //set the date format whhich needs to be displayed
-        formatter.dateFormat = "EEEE, MMMM dd, yyyy, hh:mm a"
-
-        // convert date to string
-        let displayDateString = formatter.string(from: date!)
-        
-        cell.eventDateTimeLabel.text = displayDateString
-        
+        else {
+            cell.configureCell(with: pastEventsArray[indexPath.row]);
+        }
         return cell
     }
     

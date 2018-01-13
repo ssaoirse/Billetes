@@ -18,7 +18,6 @@ struct Constants {
     // MARK: Identifiers -
     static let kMenuCellIdentifier = "cellMenu"
     static let kEventCellIdentifier = "EventsTableViewCell"
-    static let kShowEventDetails = "showEventDetails"
     
     // MARK: -
     // MARK: Storyboard names -
@@ -31,7 +30,8 @@ struct Constants {
     static let kViewController_Login = "LoginViewController"
     static let kViewController_Base = "SideMenuViewController"
     static let kViewController_Events = "Events"
-    
+    static let kViewController_EventDetails = "EventDetailsViewController"
+
     // MARK: -
     // MARK: Alert messages -
     static let kAlert_InvalidCredentials = "Invalid Username or Password."

@@ -69,19 +69,6 @@ class EventsViewController: BaseMenuViewController {
     }
     
     
-    func fetchEventDetails() -> Void {
-        let eventsController = EventsController()
-        eventsController.getDetails(
-            for: 50773,
-            success: { (eventDetail) in
-                print(eventDetail)
-        },
-            failure: { (message) in
-                
-        })
-    }
-    
-    
     func fetchEventDayTools() -> Void {
         let eventsController = EventsController()
         eventsController.getEventDayTools(
@@ -139,9 +126,11 @@ extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.kEventCellIdentifier,
-                                                 for: indexPath) as! EventsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.kEventCellIdentifier, for: indexPath)
+            as! EventsTableViewCell
         
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
+                
         // configure cell based on selected segment.
         if (self.eventsSegmentedControl.selectedSegmentIndex == 0) {
             cell.configureCell(with: upcomingEventsArray[indexPath.row]);
@@ -149,12 +138,22 @@ extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
         else {
             cell.configureCell(with: pastEventsArray[indexPath.row]);
         }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        self.performSegue(withIdentifier: Constants.kShowEventDetails, sender: self)
+        let eventDetailsViewController = storyboard?.instantiateViewController(withIdentifier: Constants.kViewController_EventDetails) as! EventDetailsViewController
+        
+        if (self.eventsSegmentedControl.selectedSegmentIndex == 0) {
+            eventDetailsViewController.eventID = self.upcomingEventsArray[indexPath.row].eventId
+        }
+        else {
+            eventDetailsViewController.eventID = self.pastEventsArray[indexPath.row].eventId
+        }
+        
+        navigationController?.pushViewController(eventDetailsViewController, animated: true)
     }
 }
 

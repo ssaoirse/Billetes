@@ -36,6 +36,7 @@ class EventsTableViewCell: UITableViewCell {
     
     // Set up cell properties for event.
     func configureCell(with event: Event) -> Void {
+        
         self.selectionStyle = UITableViewCellSelectionStyle.none
         
         Alamofire.request(event.thumbnailURL!).response { response in
@@ -47,17 +48,27 @@ class EventsTableViewCell: UITableViewCell {
             }
         }
         
+        // will remove this line after some testing
+        // cell.eventImageView.imageFromUrl(urlString: pastEventsArray[indexPath.row].thumbnailURL!)
+        
         self.eventNameLabel.text = event.name
         
-        // Format the date
         let formatter = DateFormatter()
+        
+        // set the format coming in service
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        let dateString = formatter.string(from: event.datetime)
+        
+        // convert string to date
+        let date = formatter.date(from: dateString)
         
         //set the date format whhich needs to be displayed
         formatter.dateFormat = "EEEE, MMMM dd, yyyy, hh:mm a"
         
         // convert date to string
-        let displayDateString = formatter.string(from: event.datetime)
+        let displayDateString = formatter.string(from: date!)
+        
         self.eventDateTimeLabel.text = displayDateString
     }
-
 }

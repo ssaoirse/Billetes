@@ -7,93 +7,198 @@
 //
 
 import UIKit
+import MBProgressHUD
+import Alamofire
 
 class EventsViewController: BaseMenuViewController {
-
+    
+    var upcomingEventsArray:[Event] = []
+    var pastEventsArray:[Event] = []
+    
     @IBOutlet weak var eventsSegmentedControl: UISegmentedControl!
-
+    @IBOutlet weak var eventsTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    
-        self.eventsSegmentedControl.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white],
-                                                           for: UIControlState.normal)
-        self.eventsSegmentedControl.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white],
-                                                           for: UIControlState.selected)
-        //fetchEvents()
+        
+        self.eventsSegmentedControl.setTitleTextAttributes(
+            [NSAttributedStringKey.foregroundColor: UIColor.white], for: UIControlState.normal)
+        self.eventsSegmentedControl.setTitleTextAttributes(
+            [NSAttributedStringKey.foregroundColor: UIColor.white], for: UIControlState.selected)
+        
+        fetchEvents()
         //fetchEventDetails()
         //fetchEventDayTools()
         //fetchAttendees()
         //checkinAttendee()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func segmententedControlValueChanged(_ sender: Any) {
+        
+        self.eventsTableView.reloadData()
+    }
     
     // MARK:- DEBUG CODE REMOVE LATER -
     
     func fetchEvents() -> Void {
+        
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         let eventsController = EventsController()
         eventsController.getEvents(
-        success: { upcomingEvents, pastEvents  in
-            print("Upcoming Events\n", upcomingEvents)
-            print("Past Events\n", pastEvents)
+            success: { upcomingEvents, pastEvents  in
+                
+                self.upcomingEventsArray = upcomingEvents
+                self.pastEventsArray = pastEvents
+                
+                self.eventsTableView.reloadData()
+                MBProgressHUD.hide(for: self.view, animated: true)
+                
         },
-        failure: { (message) in
-            if let msg = message {
-                print(msg)
-            }
+            failure: { (message) in
+                if let msg = message {
+                    print(msg)
+                    MBProgressHUD.hide(for: self.view, animated: true)
+                }
         })
     }
     
     
     func fetchEventDetails() -> Void {
         let eventsController = EventsController()
-        eventsController.getDetails(for: 50773,
-        success: { (eventDetail) in
-            print(eventDetail)
+        eventsController.getDetails(
+            for: 50773,
+            success: { (eventDetail) in
+                print(eventDetail)
         },
-        failure: { (message) in
-            
+            failure: { (message) in
+                
         })
     }
     
     
     func fetchEventDayTools() -> Void {
         let eventsController = EventsController()
-        eventsController.getEventDayTools(for: 50773,
-        success: { (eventDayTools) in
-            print(eventDayTools)
+        eventsController.getEventDayTools(
+            for: 50773,
+            success: { (eventDayTools) in
+                print(eventDayTools)
         },
-        failure: { (message) in
-        
+            failure: { (message) in
+                
         })
         
     }
     
     func fetchAttendees() -> Void {
         let eventsController = EventsController()
-        eventsController.getAttendees(for: 50235,
-        success: { (attendees) in
-            print("Attendees Count: ",attendees.count)
-            print(attendees)
+        eventsController.getAttendees(
+            for: 50235,
+            success: { (attendees) in
+                print("Attendees Count: ",attendees.count)
+                print(attendees)
         },
-        failure: { (message) in
-        
+            failure: { (message) in
+                
         })
     }
     
     func checkinAttendee() {
         let eventsController = EventsController()
-        eventsController.checkinAttendee(with: "1032955",
-                                         email: "johnjmaloney@gmail.com",
-                                         status: true,
-        completion: { (success, message) in
-            
+        eventsController.checkinAttendee(
+            with: "1032955",
+            email: "johnjmaloney@gmail.com",
+            status: true,
+            completion: { (success, message) in
+                
         })
     }
 }
 
+extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if (self.eventsSegmentedControl.selectedSegmentIndex == 0) {
+            
+            return upcomingEventsArray.count
+        }
+        else {
+            return pastEventsArray.count
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.kEventCellIdentifier, for: indexPath)
+            as! EventsTableViewCell
+        
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        
+        Alamofire.request(pastEventsArray[indexPath.row].thumbnailURL!).response { response in
+            if let data = response.data {
+                let image = UIImage(data: data)
+                cell.eventImageView.image = image
+            } else {
+                //TODO: assign no photo image.
+            }
+        }
+        
+        // will remove this line after some testing
+        // cell.eventImageView.imageFromUrl(urlString: pastEventsArray[indexPath.row].thumbnailURL!)
+        
+        cell.eventNameLabel.text = pastEventsArray[indexPath.row].name
+        
+        let formatter = DateFormatter()
+        
+        // set the format coming in service
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        let dateString = formatter.string(from: pastEventsArray[indexPath.row].datetime)
+        
+        // convert string to date
+        let date = formatter.date(from: dateString)
+        
+        //set the date format whhich needs to be displayed
+        formatter.dateFormat = "EEEE, MMMM dd, yyyy, hh:mm a"
+
+        // convert date to string
+        let displayDateString = formatter.string(from: date!)
+        
+        cell.eventDateTimeLabel.text = displayDateString
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.performSegue(withIdentifier: Constants.kShowEventDetails, sender: self)
+    }
+}
+
+// will remove this code after some testing
+/*
+extension UIImageView {
+    public func imageFromUrl(urlString: String) {
+        if let url = NSURL(string: urlString) {
+            let request = NSURLRequest(url: url as URL)
+            
+            NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue.main) {
+                (response: URLResponse?, data: Data?, error: Error?) -> Void in
+                if let imageData = data as NSData? {
+                    self.image = UIImage(data: imageData as Data)
+                }
+            }
+        }
+    }
+}
+ */

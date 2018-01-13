@@ -461,10 +461,10 @@
             </objects>
             <point key="canvasLocation" x="476" y="829.83508245877067"/>
         </scene>
-        <!--View Controller-->
+        <!--Event Day Tools View Controller-->
         <scene sceneID="aAL-kk-eqX">
             <objects>
-                <viewController id="jfd-2q-m1N" sceneMemberID="viewController">
+                <viewController id="jfd-2q-m1N" customClass="EventDayToolsViewController" customModule="Billetes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dkh-AI-kCy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -495,7 +495,7 @@
                 <viewControllerPlaceholder storyboardName="ManualCheckIn" id="Wr2-li-9w5" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K0B-Z0-FN8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2137" y="902"/>
+            <point key="canvasLocation" x="2131" y="829"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yuk-Ug-4m3">

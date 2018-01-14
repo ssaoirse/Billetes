@@ -26,6 +26,7 @@
 		046D129F200114BB00FEFE59 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D129E200114BB00FEFE59 /* URLConstants.swift */; };
 		046D12A1200117A400FEFE59 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D12A0200117A400FEFE59 /* LoginController.swift */; };
 		0489077520022506004D0F7B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489077420022506004D0F7B /* Settings.swift */; };
+		04ACD495200BAD1900B9A50D /* AttendeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ACD494200BAD1900B9A50D /* AttendeeTableViewCell.swift */; };
 		28D44AA25A72116408DD7B33 /* Pods_Billetes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25FE6DD9035E4FD343589F6 /* Pods_Billetes.framework */; };
 		770B1A1E200A6A9B00097977 /* ManualCheckIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770B1A1D200A6A9B00097977 /* ManualCheckIn.storyboard */; };
 		770B1A20200A6B1100097977 /* ManualCheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770B1A1F200A6B1100097977 /* ManualCheckInViewController.swift */; };
@@ -57,6 +58,7 @@
 		046D129E200114BB00FEFE59 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		046D12A0200117A400FEFE59 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		0489077420022506004D0F7B /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		04ACD494200BAD1900B9A50D /* AttendeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeTableViewCell.swift; sourceTree = "<group>"; };
 		770B1A1D200A6A9B00097977 /* ManualCheckIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ManualCheckIn.storyboard; sourceTree = "<group>"; };
 		770B1A1F200A6B1100097977 /* ManualCheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualCheckInViewController.swift; sourceTree = "<group>"; };
 		770B1A21200A6D2F00097977 /* EventDayToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDayToolsViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				77961184200A1EAB00E5EE35 /* EventDetailsViewController.swift */,
 				770B1A21200A6D2F00097977 /* EventDayToolsViewController.swift */,
 				770B1A1F200A6B1100097977 /* ManualCheckInViewController.swift */,
+				04ACD494200BAD1900B9A50D /* AttendeeTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				779611832007C35800E5EE35 /* EventsTableViewCell.swift in Sources */,
 				043AA9CD2003C52D005B1CBC /* EventsController.swift in Sources */,
 				046D126F2000FD7500FEFE59 /* AppDelegate.swift in Sources */,
+				04ACD495200BAD1900B9A50D /* AttendeeTableViewCell.swift in Sources */,
 				046D12912001040A00FEFE59 /* EventsViewController.swift in Sources */,
 				046D129C2001047600FEFE59 /* BaseMenuViewController.swift in Sources */,
 				0489077520022506004D0F7B /* Settings.swift in Sources */,

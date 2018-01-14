@@ -18,6 +18,7 @@ struct Constants {
     // MARK: Identifiers -
     static let kMenuCellIdentifier = "cellMenu"
     static let kEventCellIdentifier = "EventsTableViewCell"
+    static let kAttendeeCellIdentifier = "AttendeeTableViewCell"
     
     // MARK: -
     // MARK: Storyboard names -

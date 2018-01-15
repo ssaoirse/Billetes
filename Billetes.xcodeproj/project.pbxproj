@@ -30,7 +30,7 @@
 		28D44AA25A72116408DD7B33 /* Pods_Billetes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25FE6DD9035E4FD343589F6 /* Pods_Billetes.framework */; };
 		770B1A1E200A6A9B00097977 /* ManualCheckIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770B1A1D200A6A9B00097977 /* ManualCheckIn.storyboard */; };
 		770B1A20200A6B1100097977 /* ManualCheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770B1A1F200A6B1100097977 /* ManualCheckInViewController.swift */; };
-		770B1A22200A6D2F00097977 /* EventDayToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770B1A21200A6D2F00097977 /* EventDayToolsViewController.swift */; };
+		77211764200CBFB2001EA67E /* EventDayToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77211763200CBFB2001EA67E /* EventDayToolsViewController.swift */; };
 		779611832007C35800E5EE35 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779611822007C35800E5EE35 /* EventsTableViewCell.swift */; };
 		77961185200A1EAB00E5EE35 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77961184200A1EAB00E5EE35 /* EventDetailsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -61,7 +61,7 @@
 		04ACD494200BAD1900B9A50D /* AttendeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeTableViewCell.swift; sourceTree = "<group>"; };
 		770B1A1D200A6A9B00097977 /* ManualCheckIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ManualCheckIn.storyboard; sourceTree = "<group>"; };
 		770B1A1F200A6B1100097977 /* ManualCheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualCheckInViewController.swift; sourceTree = "<group>"; };
-		770B1A21200A6D2F00097977 /* EventDayToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDayToolsViewController.swift; sourceTree = "<group>"; };
+		77211763200CBFB2001EA67E /* EventDayToolsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDayToolsViewController.swift; sourceTree = "<group>"; };
 		779611822007C35800E5EE35 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
 		77961184200A1EAB00E5EE35 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		A263A224AFA63CFEEFCA39F6 /* Pods-Billetes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billetes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Billetes/Pods-Billetes.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 				046D128F2001040900FEFE59 /* EventsViewController.swift */,
 				779611822007C35800E5EE35 /* EventsTableViewCell.swift */,
 				77961184200A1EAB00E5EE35 /* EventDetailsViewController.swift */,
-				770B1A21200A6D2F00097977 /* EventDayToolsViewController.swift */,
+				77211763200CBFB2001EA67E /* EventDayToolsViewController.swift */,
 				770B1A1F200A6B1100097977 /* ManualCheckInViewController.swift */,
 				04ACD494200BAD1900B9A50D /* AttendeeTableViewCell.swift */,
 			);
@@ -339,9 +339,9 @@
 			files = (
 				0409DCEB200695180057D848 /* Attendee.swift in Sources */,
 				046D12A1200117A400FEFE59 /* LoginController.swift in Sources */,
-				770B1A22200A6D2F00097977 /* EventDayToolsViewController.swift in Sources */,
 				046D129F200114BB00FEFE59 /* URLConstants.swift in Sources */,
 				046D12922001040A00FEFE59 /* LoginViewController.swift in Sources */,
+				77211764200CBFB2001EA67E /* EventDayToolsViewController.swift in Sources */,
 				77961185200A1EAB00E5EE35 /* EventDetailsViewController.swift in Sources */,
 				046D12952001041800FEFE59 /* Bundle+Extension.swift in Sources */,
 				043AA9CF2003CB5C005B1CBC /* Event.swift in Sources */,

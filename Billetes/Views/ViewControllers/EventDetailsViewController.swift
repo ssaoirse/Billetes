@@ -36,6 +36,17 @@ class EventDetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func eventDayToolsTapped(_ sender: Any) {
+        
+        let eventDayToolsViewController = storyboard?.instantiateViewController(withIdentifier: Constants.kViewController_EventDayTools) as! EventDayToolsViewController
+        
+        eventDayToolsViewController.eventID = self.eventID
+        
+        navigationController?.pushViewController(eventDayToolsViewController, animated: true)
+    }
+    
+    @IBAction func openEventInBrowserTapped(_ sender: Any) {
+    }
     
     func fetchEventDetails(for eventId:Int) -> Void {
         

@@ -28,8 +28,6 @@ class EventsViewController: BaseMenuViewController {
             [NSAttributedStringKey.foregroundColor: UIColor.white], for: UIControlState.selected)
         
         fetchEvents()
-        //fetchEventDetails()
-        //fetchEventDayTools()
         //fetchAttendees()
         //checkinAttendee()
     }
@@ -66,20 +64,6 @@ class EventsViewController: BaseMenuViewController {
                     MBProgressHUD.hide(for: self.view, animated: true)
                 }
         })
-    }
-    
-    
-    func fetchEventDayTools() -> Void {
-        let eventsController = EventsController()
-        eventsController.getEventDayTools(
-            for: 50773,
-            success: { (eventDayTools) in
-                print(eventDayTools)
-        },
-            failure: { (message) in
-                
-        })
-        
     }
     
     func fetchAttendees() -> Void {

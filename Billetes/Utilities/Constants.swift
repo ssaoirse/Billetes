@@ -32,6 +32,7 @@ struct Constants {
     static let kViewController_Base = "SideMenuViewController"
     static let kViewController_Events = "Events"
     static let kViewController_EventDetails = "EventDetailsViewController"
+    static let kViewController_EventDayTools = "EventDayToolsViewController"
 
     // MARK: -
     // MARK: Alert messages -

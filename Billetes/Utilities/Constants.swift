@@ -73,6 +73,9 @@ struct Constants {
     static let kTicketsKey = "tickets"
     static let kAvailableKey = "available"
     static let kAmountKey = "amount"
+    static let kFreeAdmissionKey = "free_admission"
+    static let kEventUrlKey = "event_url"
+    
     
     // MARK: - Event Day Tools -
     static let kCheckedInKey = "checked-in"

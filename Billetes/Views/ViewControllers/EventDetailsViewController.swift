@@ -13,6 +13,8 @@ import MBProgressHUD
 class EventDetailsViewController: UIViewController {
     
     var eventID = 0
+    var thumbnailURL: String? = nil
+    var eventURL: String? = nil
     
     @IBOutlet weak var eventImageView: UIImageView!
     @IBOutlet weak var eventNameLabel: UILabel!
@@ -41,11 +43,17 @@ class EventDetailsViewController: UIViewController {
         let eventDayToolsViewController = storyboard?.instantiateViewController(withIdentifier: Constants.kViewController_EventDayTools) as! EventDayToolsViewController
         
         eventDayToolsViewController.eventID = self.eventID
-        
+        if let thumbnailURL = self.thumbnailURL {
+            eventDayToolsViewController.eventImageURL = thumbnailURL
+        }
         navigationController?.pushViewController(eventDayToolsViewController, animated: true)
     }
     
     @IBAction func openEventInBrowserTapped(_ sender: Any) {
+        // Open event URL in browser.
+        if let eventURL = self.eventURL, let url = URL(string: eventURL) {
+            UIApplication.shared.openURL(url)
+        }
     }
     
     func fetchEventDetails(for eventId:Int) -> Void {
@@ -55,6 +63,16 @@ class EventDetailsViewController: UIViewController {
         eventsController.getDetails(
             for: eventId,
             success: { (eventDetail) in
+                
+                // Save the thumbnail URL.
+                if let thumbnailURL = eventDetail.thumbnailURL {
+                    self.thumbnailURL = thumbnailURL
+                }
+                
+                // Save the eventURL
+                if let eventURL = eventDetail.eventURL {
+                    self.eventURL = eventURL
+                }
                 
                 Alamofire.request(eventDetail.thumbnailURL!).response { response in
                     if let data = response.data {
@@ -88,8 +106,10 @@ class EventDetailsViewController: UIViewController {
                 self.ticketsSoldLabel.text = String(eventDetail.ticketsSold)
                 self.amountLabel.text = String(eventDetail.totalAmount)
                 
-                // not present in the service
-                // self.daysLabel.text = String(eventDetail.a)
+                // Get difference in number of days from event date.
+                let nbrOfDays = self.differenceInDays(with: eventDetail.datetime)
+                self.daysLabel.text = String(nbrOfDays)
+                
                 // self.ticketsDetailsLabel.text = eventDetail.t
                 
                 MBProgressHUD.hide(for: self.view, animated: true)
@@ -97,6 +117,28 @@ class EventDetailsViewController: UIViewController {
             failure: { (message) in
                 MBProgressHUD.hide(for: self.view, animated: true)
         })
+    }
+    
+    
+    // Returns difference in terms of number of days for the passed Date with
+    // comparison to Today's date.
+    func differenceInDays(with date: Date) -> Int {
+        let calendar = NSCalendar.current
+        
+        // Replace the hour (time) of both dates with 00:00
+        let date1 = calendar.startOfDay(for: Date())
+        let date2 = calendar.startOfDay(for: date)
+        
+        let components = calendar.dateComponents([.day], from: date1, to: date2)
+        var nbrOfDays = 0
+        guard let difference = components.day else {
+            return 0
+        }
+        nbrOfDays = difference
+        if nbrOfDays < 0 {
+            nbrOfDays = -nbrOfDays
+        }
+        return nbrOfDays
     }
     
 }

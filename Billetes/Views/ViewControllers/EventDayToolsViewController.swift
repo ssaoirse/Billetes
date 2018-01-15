@@ -13,6 +13,7 @@ import MBProgressHUD
 class EventDayToolsViewController: UIViewController {
 
     var eventID = 0
+    var eventImageURL: String? = nil
 
     @IBOutlet weak var eventImageView: UIImageView!
     @IBOutlet weak var eventNameLabel: UILabel!
@@ -25,8 +26,12 @@ class EventDayToolsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         fetchEventDayTools(for: eventID)
+        
+        // Initiate request to load image.
+        DispatchQueue.main.async {
+            self.loadEventImage()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,15 +47,6 @@ class EventDayToolsViewController: UIViewController {
             for: eventId,
             success: { (eventDayTools) in
                 print(eventDayTools)
-                
-//                Alamofire.request(eventDayTools.u!).response { response in
-//                    if let data = response.data {
-//                        let image = UIImage(data: data)
-//                        self.eventImageView.image = image
-//                    } else {
-//                        //TODO: assign no photo image.
-//                    }
-//                }
                 
                 self.eventNameLabel.text = eventDayTools.name
                 self.eventLocationLabel.text = eventDayTools.location
@@ -84,5 +80,21 @@ class EventDayToolsViewController: UIViewController {
         })
         
     }
-
+    
+    // Load image using URL passed.
+    func loadEventImage() -> Void {
+        guard let url = self.eventImageURL else {
+            return
+        }
+        Alamofire.request(url).response { response in
+            if let data = response.data {
+                if let image = UIImage(data: data) {
+                    self.eventImageView.image = image
+                }
+            } else {
+                //TODO: assign no photo image.
+            }
+        }
+    }
+    
 }

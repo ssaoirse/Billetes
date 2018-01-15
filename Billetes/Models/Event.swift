@@ -35,11 +35,14 @@ struct EventDetail {
     let ticketsAvailable: Int
     let totalTickets: Int
     let totalAmount: Double
+    let freeAdmission: Int
     var location: String?
     var thumbnailURL: String?
+    var eventURL: String?
     
     init(eventId: Int, name: String, datetime: Date, ticketsSold: Int, ticketsAvailable: Int,
-         totalTickets: Int, totalAmount: Double, location: String? = nil, thumbnailURL: String? = nil) {
+         totalTickets: Int, totalAmount: Double, freeAdmission: Int, location: String? = nil, thumbnailURL: String? = nil,
+         eventURL: String? = nil) {
         self.eventId = eventId
         self.name = name
         self.datetime = datetime
@@ -47,8 +50,10 @@ struct EventDetail {
         self.ticketsAvailable = ticketsAvailable
         self.totalTickets = totalTickets
         self.totalAmount = totalAmount
+        self.freeAdmission = freeAdmission
         self.location = location
         self.thumbnailURL = thumbnailURL
+        self.eventURL = eventURL
     }
 }
 

@@ -41,10 +41,15 @@ class EventsTableViewCell: UITableViewCell {
         
         Alamofire.request(event.thumbnailURL!).response { response in
             if let data = response.data {
-                let image = UIImage(data: data)
-                self.eventImageView.image = image
+                if let image = UIImage(data: data) {
+                    self.eventImageView.image = image
+                }
+                else {
+                    self.eventImageView.image = UIImage(named: "EventListPlaceHolder")
+                }
             } else {
-                //TODO: assign no photo image.
+                // assign no photo image.
+                self.eventImageView.image = UIImage(named: "EventListPlaceHolder")
             }
         }
         

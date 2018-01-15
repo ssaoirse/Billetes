@@ -135,8 +135,11 @@ class EventsController: NSObject {
                 let ticketsAvailable = json[Constants.kDataKey][Constants.kAvailableKey].intValue
                 let totalTickets = json[Constants.kDataKey][Constants.kTicketsKey].intValue
                 let totalAmount = json[Constants.kDataKey][Constants.kAmountKey].doubleValue
+                let freeAdmission = json[Constants.kDataKey][Constants.kFreeAdmissionKey].intValue
                 let thumbnailURL = json[Constants.kDataKey][Constants.kThumbnail_UrlKey].string
                 let location = json[Constants.kDataKey][Constants.kLocationKey].string
+                let eventURL = json[Constants.kDataKey][Constants.kEventUrlKey].string
+                
                 
                 // TODO: handle datetime.
                 let dateFormatter = DateFormatter()
@@ -151,8 +154,10 @@ class EventsController: NSObject {
                                               ticketsAvailable: ticketsAvailable,
                                               totalTickets: totalTickets,
                                               totalAmount: totalAmount,
+                                              freeAdmission: freeAdmission,
                                               location: location,
-                                              thumbnailURL: thumbnailURL)
+                                              thumbnailURL: thumbnailURL,
+                                              eventURL: eventURL)
                 
                 // notify success.
                 success(eventDetail)

@@ -726,6 +726,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="tMr-Pt-dpb" kind="show" id="ioU-LT-3F8"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojd-WM-PAU" userLabel="Separation Label">
                                                 <rect key="frame" x="170" y="0.0" width="1" height="60"/>
@@ -932,6 +935,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bug-oh-JwE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1897" y="131"/>
+        </scene>
+        <!--Code Scanner View Controller-->
+        <scene sceneID="yhK-jY-yPu">
+            <objects>
+                <viewController id="tMr-Pt-dpb" customClass="QRCodeScannerViewController" customModule="Billetes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yqm-nl-hnZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="U9r-kl-gYI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G7G-W2-iyC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001" y="900"/>
         </scene>
     </scenes>
     <resources>

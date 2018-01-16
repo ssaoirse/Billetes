@@ -106,11 +106,11 @@ class EventDetailsViewController: UIViewController {
                 
                 self.eventDateLabel.text = displayDateString
                 self.ticketsSoldLabel.text = String(eventDetail.ticketsSold)
-                self.amountLabel.text = String(eventDetail.totalAmount)
+                self.amountLabel.text = "$\(eventDetail.totalAmount)"
                 
                 // Get difference in number of days from event date.
-                let nbrOfDays = self.differenceInDays(with: eventDetail.datetime)
-                self.daysLabel.text = String(nbrOfDays)
+                let numberOfDays = self.differenceInDays(with: eventDetail.datetime)
+                self.daysLabel.text = String(numberOfDays)
                 
                 let detailsString = "Free Admission: $\(eventDetail.freeAdmission) \nSold: \(eventDetail.ticketsSold) / Available: \(eventDetail.ticketsAvailable)* / Active"
                 self.ticketsDetailsLabel.text = detailsString

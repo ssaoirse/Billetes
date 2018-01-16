@@ -586,7 +586,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5m0-iG-aB3">
                                                 <rect key="frame" x="10" y="38" width="106.5" height="17"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -611,7 +611,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hLd-w0-ajC">
                                                 <rect key="frame" x="134.5" y="38" width="105.5" height="17"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -639,7 +639,13 @@
                                         </constraints>
                                     </view>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xlE-21-5uM">
-                                        <rect key="frame" x="10" y="108" width="325" height="2"/>
+                                        <rect key="frame" x="10" y="100" width="325" height="10"/>
+                                        <color key="tintColor" red="0.70196078429999997" green="0.14117647059999999" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="rRi-iH-0cE"/>
+                                        </constraints>
+                                        <color key="progressTintColor" red="0.70196078429999997" green="0.14117647059999999" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="trackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </progressView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -790,6 +796,7 @@
                         <viewLayoutGuide key="safeArea" id="xT1-49-XxI"/>
                     </view>
                     <connections>
+                        <outlet property="checkInSummaryProgressView" destination="xlE-21-5uM" id="eDB-5a-CKd"/>
                         <outlet property="checkedInLabel" destination="5m0-iG-aB3" id="ueS-wT-TC7"/>
                         <outlet property="eventDateLabel" destination="FdB-H2-bms" id="xN0-Vn-0rn"/>
                         <outlet property="eventImageView" destination="Hlk-t7-hmi" id="8vV-Qd-Vn6"/>

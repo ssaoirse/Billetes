@@ -21,10 +21,14 @@ class EventDayToolsViewController: UIViewController {
     @IBOutlet weak var eventDateLabel: UILabel!
     @IBOutlet weak var checkedInLabel: UILabel!
     @IBOutlet weak var notCheckedInLabel: UILabel!
+    @IBOutlet weak var checkInSummaryProgressView: UIProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        checkInSummaryProgressView.clipsToBounds = true
+        checkInSummaryProgressView.layer.cornerRadius = 3
+        
         // Do any additional setup after loading the view.
         fetchEventDayTools(for: eventID)
         

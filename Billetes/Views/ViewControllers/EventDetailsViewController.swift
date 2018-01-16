@@ -112,7 +112,8 @@ class EventDetailsViewController: UIViewController {
                 let nbrOfDays = self.differenceInDays(with: eventDetail.datetime)
                 self.daysLabel.text = String(nbrOfDays)
                 
-                // self.ticketsDetailsLabel.text = eventDetail.t
+                let detailsString = "Free Admission: $\(eventDetail.freeAdmission) \nSold: \(eventDetail.ticketsSold) / Available: \(eventDetail.ticketsAvailable)* / Active"
+                self.ticketsDetailsLabel.text = detailsString
                 
                 MBProgressHUD.hide(for: self.view, animated: true)
         },

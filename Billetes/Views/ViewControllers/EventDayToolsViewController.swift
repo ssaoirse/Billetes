@@ -46,8 +46,9 @@ class EventDayToolsViewController: UIViewController {
         eventsController.getEventDayTools(
             for: eventId,
             success: { (eventDayTools) in
-                print(eventDayTools)
                 
+                print("eventDayTools: \n", eventDayTools, "\n\n")
+
                 self.eventNameLabel.text = eventDayTools.name
                 self.eventLocationLabel.text = eventDayTools.location
                 

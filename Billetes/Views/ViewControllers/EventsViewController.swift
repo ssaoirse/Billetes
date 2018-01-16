@@ -51,6 +51,9 @@ class EventsViewController: BaseMenuViewController {
         eventsController.getEvents(
             success: { upcomingEvents, pastEvents  in
                 
+                print("Upcoming events: \n", upcomingEvents, "\n\n")
+                print("Past events: \n", pastEvents, "\n\n")
+
                 self.upcomingEventsArray = upcomingEvents
                 self.pastEventsArray = pastEvents
                 

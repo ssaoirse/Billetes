@@ -64,6 +64,8 @@ class EventDetailsViewController: UIViewController {
             for: eventId,
             success: { (eventDetail) in
                 
+                print("eventDetail: \n", eventDetail, "\n\n")
+
                 // Save the thumbnail URL.
                 if let thumbnailURL = eventDetail.thumbnailURL {
                     self.thumbnailURL = thumbnailURL

@@ -11,5 +11,6 @@ target 'Billetes' do
 	pod 'SWRevealViewController', '~> 2.3.0'
 	pod 'MBProgressHUD', '~> 1.0.0'
 	pod 'SwiftyJSON', '~> 4.0.0'
+	pod 'QRCodeReader.swift', '~> 8.0.3'
 
 end

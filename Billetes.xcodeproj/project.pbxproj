@@ -25,6 +25,7 @@
 		046D129C2001047600FEFE59 /* BaseMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D129A2001047600FEFE59 /* BaseMenuViewController.swift */; };
 		046D129F200114BB00FEFE59 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D129E200114BB00FEFE59 /* URLConstants.swift */; };
 		046D12A1200117A400FEFE59 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D12A0200117A400FEFE59 /* LoginController.swift */; };
+		04771E29200E749A009E64AB /* QRCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04771E28200E749A009E64AB /* QRCodeScannerViewController.swift */; };
 		0489077520022506004D0F7B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489077420022506004D0F7B /* Settings.swift */; };
 		04ACD495200BAD1900B9A50D /* AttendeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ACD494200BAD1900B9A50D /* AttendeeTableViewCell.swift */; };
 		28D44AA25A72116408DD7B33 /* Pods_Billetes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25FE6DD9035E4FD343589F6 /* Pods_Billetes.framework */; };
@@ -57,6 +58,7 @@
 		046D129A2001047600FEFE59 /* BaseMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMenuViewController.swift; sourceTree = "<group>"; };
 		046D129E200114BB00FEFE59 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		046D12A0200117A400FEFE59 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		04771E28200E749A009E64AB /* QRCodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewController.swift; sourceTree = "<group>"; };
 		0489077420022506004D0F7B /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		04ACD494200BAD1900B9A50D /* AttendeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeTableViewCell.swift; sourceTree = "<group>"; };
 		770B1A1D200A6A9B00097977 /* ManualCheckIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ManualCheckIn.storyboard; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				77211763200CBFB2001EA67E /* EventDayToolsViewController.swift */,
 				770B1A1F200A6B1100097977 /* ManualCheckInViewController.swift */,
 				04ACD494200BAD1900B9A50D /* AttendeeTableViewCell.swift */,
+				04771E28200E749A009E64AB /* QRCodeScannerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Billetes/Pods-Billetes-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
 				"${BUILT_PRODUCTS_DIR}/SWRevealViewController/SWRevealViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
@@ -306,6 +310,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWRevealViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
@@ -354,6 +359,7 @@
 				046D129C2001047600FEFE59 /* BaseMenuViewController.swift in Sources */,
 				0489077520022506004D0F7B /* Settings.swift in Sources */,
 				046D12962001041800FEFE59 /* Constants.swift in Sources */,
+				04771E29200E749A009E64AB /* QRCodeScannerViewController.swift in Sources */,
 				043AA9D12003E1ED005B1CBC /* DateFormatter+Extension.swift in Sources */,
 				770B1A20200A6B1100097977 /* ManualCheckInViewController.swift in Sources */,
 			);

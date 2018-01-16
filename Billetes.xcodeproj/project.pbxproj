@@ -28,16 +28,14 @@
 		04771E29200E749A009E64AB /* QRCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04771E28200E749A009E64AB /* QRCodeScannerViewController.swift */; };
 		0489077520022506004D0F7B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489077420022506004D0F7B /* Settings.swift */; };
 		04ACD495200BAD1900B9A50D /* AttendeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ACD494200BAD1900B9A50D /* AttendeeTableViewCell.swift */; };
-		28D44AA25A72116408DD7B33 /* Pods_Billetes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25FE6DD9035E4FD343589F6 /* Pods_Billetes.framework */; };
-		770B1A1E200A6A9B00097977 /* ManualCheckIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770B1A1D200A6A9B00097977 /* ManualCheckIn.storyboard */; };
 		770B1A20200A6B1100097977 /* ManualCheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770B1A1F200A6B1100097977 /* ManualCheckInViewController.swift */; };
 		77211764200CBFB2001EA67E /* EventDayToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77211763200CBFB2001EA67E /* EventDayToolsViewController.swift */; };
 		779611832007C35800E5EE35 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779611822007C35800E5EE35 /* EventsTableViewCell.swift */; };
 		77961185200A1EAB00E5EE35 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77961184200A1EAB00E5EE35 /* EventDetailsViewController.swift */; };
+		DBB277CD1B73DA5A446C7C8F /* Pods_Billetes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78DA51F7A7059F7810D64ED /* Pods_Billetes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		027FFC864686EDF0F95EB7C2 /* Pods-Billetes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billetes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Billetes/Pods-Billetes.debug.xcconfig"; sourceTree = "<group>"; };
 		0409DCEA200695180057D848 /* Attendee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendee.swift; sourceTree = "<group>"; };
 		043AA9CC2003C52D005B1CBC /* EventsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
 		043AA9CE2003CB5C005B1CBC /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -61,13 +59,13 @@
 		04771E28200E749A009E64AB /* QRCodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewController.swift; sourceTree = "<group>"; };
 		0489077420022506004D0F7B /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		04ACD494200BAD1900B9A50D /* AttendeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeTableViewCell.swift; sourceTree = "<group>"; };
-		770B1A1D200A6A9B00097977 /* ManualCheckIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ManualCheckIn.storyboard; sourceTree = "<group>"; };
+		60A6472011CA4252C282DEE8 /* Pods-Billetes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billetes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Billetes/Pods-Billetes.release.xcconfig"; sourceTree = "<group>"; };
+		71B6C9784AFC65D50F928FDA /* Pods-Billetes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billetes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Billetes/Pods-Billetes.debug.xcconfig"; sourceTree = "<group>"; };
 		770B1A1F200A6B1100097977 /* ManualCheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualCheckInViewController.swift; sourceTree = "<group>"; };
 		77211763200CBFB2001EA67E /* EventDayToolsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDayToolsViewController.swift; sourceTree = "<group>"; };
 		779611822007C35800E5EE35 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
 		77961184200A1EAB00E5EE35 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
-		A263A224AFA63CFEEFCA39F6 /* Pods-Billetes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billetes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Billetes/Pods-Billetes.release.xcconfig"; sourceTree = "<group>"; };
-		B25FE6DD9035E4FD343589F6 /* Pods_Billetes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Billetes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A78DA51F7A7059F7810D64ED /* Pods_Billetes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Billetes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28D44AA25A72116408DD7B33 /* Pods_Billetes.framework in Frameworks */,
+				DBB277CD1B73DA5A446C7C8F /* Pods_Billetes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,8 +85,8 @@
 			children = (
 				046D126D2000FD7500FEFE59 /* Billetes */,
 				046D126C2000FD7500FEFE59 /* Products */,
-				F5AAF912D861BCC145F61371 /* Pods */,
-				DD4EF1A2206B8D0C82C24928 /* Frameworks */,
+				E1197F5CA837F0B4CA3187AC /* Pods */,
+				7E05E36A0692D505BB596282 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,7 +145,6 @@
 				046D12972001046A00FEFE59 /* Base.storyboard */,
 				046D128C2001040000FEFE59 /* Events.storyboard */,
 				046D128B2001040000FEFE59 /* Login.storyboard */,
-				770B1A1D200A6A9B00097977 /* ManualCheckIn.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -182,19 +179,19 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		DD4EF1A2206B8D0C82C24928 /* Frameworks */ = {
+		7E05E36A0692D505BB596282 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B25FE6DD9035E4FD343589F6 /* Pods_Billetes.framework */,
+				A78DA51F7A7059F7810D64ED /* Pods_Billetes.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F5AAF912D861BCC145F61371 /* Pods */ = {
+		E1197F5CA837F0B4CA3187AC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				027FFC864686EDF0F95EB7C2 /* Pods-Billetes.debug.xcconfig */,
-				A263A224AFA63CFEEFCA39F6 /* Pods-Billetes.release.xcconfig */,
+				71B6C9784AFC65D50F928FDA /* Pods-Billetes.debug.xcconfig */,
+				60A6472011CA4252C282DEE8 /* Pods-Billetes.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -206,12 +203,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 046D127D2000FD7500FEFE59 /* Build configuration list for PBXNativeTarget "Billetes" */;
 			buildPhases = (
-				116C752DEA6B0804CA756A64 /* [CP] Check Pods Manifest.lock */,
+				6E21A95D543D519C80FCB737 /* [CP] Check Pods Manifest.lock */,
 				046D12672000FD7500FEFE59 /* Sources */,
 				046D12682000FD7500FEFE59 /* Frameworks */,
 				046D12692000FD7500FEFE59 /* Resources */,
-				AC4644764257D42A9FE08CCE /* [CP] Embed Pods Frameworks */,
-				DE2FBF0F27A7AFD2D375E6C2 /* [CP] Copy Pods Resources */,
+				4F829F7F60C0BC79752A64FD /* [CP] Embed Pods Frameworks */,
+				9FAA9B0EEEB3C6293C04AC52 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,7 +263,6 @@
 				046D12982001046A00FEFE59 /* Base.storyboard in Resources */,
 				046D12792000FD7500FEFE59 /* LaunchScreen.storyboard in Resources */,
 				046D12762000FD7500FEFE59 /* Assets.xcassets in Resources */,
-				770B1A1E200A6A9B00097977 /* ManualCheckIn.storyboard in Resources */,
 				046D128E2001040000FEFE59 /* Events.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,25 +270,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		116C752DEA6B0804CA756A64 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Billetes-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AC4644764257D42A9FE08CCE /* [CP] Embed Pods Frameworks */ = {
+		4F829F7F60C0BC79752A64FD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -320,7 +298,25 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Billetes/Pods-Billetes-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DE2FBF0F27A7AFD2D375E6C2 /* [CP] Copy Pods Resources */ = {
+		6E21A95D543D519C80FCB737 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Billetes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FAA9B0EEEB3C6293C04AC52 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -491,7 +487,7 @@
 		};
 		046D127E2000FD7500FEFE59 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 027FFC864686EDF0F95EB7C2 /* Pods-Billetes.debug.xcconfig */;
+			baseConfigurationReference = 71B6C9784AFC65D50F928FDA /* Pods-Billetes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -509,7 +505,7 @@
 		};
 		046D127F2000FD7500FEFE59 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A263A224AFA63CFEEFCA39F6 /* Pods-Billetes.release.xcconfig */;
+			baseConfigurationReference = 60A6472011CA4252C282DEE8 /* Pods-Billetes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

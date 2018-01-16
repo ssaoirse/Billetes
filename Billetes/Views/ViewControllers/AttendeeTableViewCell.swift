@@ -10,15 +10,22 @@ import UIKit
 
 class AttendeeTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var attendeeName: UILabel!
-    
+    @IBOutlet weak var attendeeName: UILabel!    
     @IBOutlet weak var admissionStatus: UILabel!
-    
     @IBOutlet weak var ticketNumber: UILabel!
+    @IBOutlet weak var attendeeBackgroundView: UIView!
+
     override func awakeFromNib() {
         
         super.awakeFromNib()
         // Initialization code
+        
+        self.attendeeBackgroundView.layer.shadowOpacity = 0.6
+        self.attendeeBackgroundView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        self.attendeeBackgroundView.layer.shadowRadius = 5.0
+        self.attendeeBackgroundView.layer.shadowColor = UIColor.darkGray.cgColor
+        self.attendeeBackgroundView.layer.cornerRadius = 3.0
+        self.attendeeBackgroundView.layer.cornerRadius = 3.0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

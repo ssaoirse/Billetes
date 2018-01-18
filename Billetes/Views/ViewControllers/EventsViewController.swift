@@ -17,7 +17,8 @@ class EventsViewController: BaseMenuViewController {
     
     @IBOutlet weak var eventsSegmentedControl: UISegmentedControl!
     @IBOutlet weak var eventsTableView: UITableView!
-    
+    @IBOutlet weak var noEventsLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -40,6 +41,22 @@ class EventsViewController: BaseMenuViewController {
     @IBAction func segmententedControlValueChanged(_ sender: Any) {
         
         self.eventsTableView.reloadData()
+        self.manageNoDataLabel()
+    }
+    
+    func manageNoDataLabel() -> Void {
+        
+        if (self.eventsSegmentedControl.selectedSegmentIndex == 0 && self.upcomingEventsArray.count == 0) {
+        
+            self.noEventsLabel.isHidden = false
+        }
+        else if (self.eventsSegmentedControl.selectedSegmentIndex == 1 && self.pastEventsArray.count == 0) {
+            
+            self.noEventsLabel.isHidden = false
+        }
+        else {
+            self.noEventsLabel.isHidden = true
+        }
     }
     
     // MARK:- DEBUG CODE REMOVE LATER -
@@ -58,6 +75,7 @@ class EventsViewController: BaseMenuViewController {
                 self.pastEventsArray = pastEvents
                 
                 self.eventsTableView.reloadData()
+                self.manageNoDataLabel()
                 MBProgressHUD.hide(for: self.view, animated: true)
                 
         },

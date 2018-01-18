@@ -118,6 +118,12 @@
                                     <outlet property="delegate" destination="rTy-qs-Z33" id="cCE-Qg-l0u"/>
                                 </connections>
                             </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No events are present." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aos-0e-qCT">
+                                <rect key="frame" x="101.5" y="291.5" width="172" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -131,6 +137,8 @@
                             <constraint firstItem="zsq-t3-X1i" firstAttribute="top" secondItem="9Lf-w4-ODK" secondAttribute="top" constant="20" id="eLf-Js-F2x"/>
                             <constraint firstItem="zsq-t3-X1i" firstAttribute="leading" secondItem="9Lf-w4-ODK" secondAttribute="leading" constant="15" id="gAu-2B-Z4X"/>
                             <constraint firstItem="Cu8-vF-8N4" firstAttribute="trailing" secondItem="9Lf-w4-ODK" secondAttribute="trailing" id="hSq-nh-j9u"/>
+                            <constraint firstItem="aos-0e-qCT" firstAttribute="centerY" secondItem="9bj-RA-ui2" secondAttribute="centerY" id="lDg-WV-aj9"/>
+                            <constraint firstItem="aos-0e-qCT" firstAttribute="centerX" secondItem="9bj-RA-ui2" secondAttribute="centerX" id="zY3-6W-72G"/>
                             <constraint firstItem="Cu8-vF-8N4" firstAttribute="top" secondItem="9Lf-w4-ODK" secondAttribute="top" id="zfi-4L-2ce"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Lf-w4-ODK"/>
@@ -143,6 +151,7 @@
                     <connections>
                         <outlet property="eventsSegmentedControl" destination="zsq-t3-X1i" id="QeE-bW-1Cq"/>
                         <outlet property="eventsTableView" destination="gi6-be-3zN" id="n75-9B-KSL"/>
+                        <outlet property="noEventsLabel" destination="aos-0e-qCT" id="duy-ro-8Dw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9yA-dc-4NE" userLabel="First Responder" sceneMemberID="firstResponder"/>

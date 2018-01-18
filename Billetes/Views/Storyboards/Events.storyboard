@@ -458,7 +458,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Event Details" id="S5m-Cs-SKf">
                         <barButtonItem key="backBarButtonItem" title=" " id="N2J-kb-8PA"/>
-                        <barButtonItem key="rightBarButtonItem" image="Share" id="gqh-v4-8mV"/>
+                        <barButtonItem key="rightBarButtonItem" image="Share" id="gqh-v4-8mV">
+                            <connections>
+                                <action selector="shareButtonTapped:" destination="rlH-R7-w33" id="6oN-Xt-5Rd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="amountLabel" destination="OQX-rg-94O" id="ld5-ZP-cfF"/>

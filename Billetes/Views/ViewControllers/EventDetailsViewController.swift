@@ -56,6 +56,24 @@ class EventDetailsViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func shareButtonTapped(_ sender: UIBarButtonItem) {
+        // text to share
+        let text = self.eventNameLabel.text ?? "Boletos"
+        let url = self.eventURL ?? ""
+        
+        // set up activity view controller
+        let itemsToShare: [String] = [ url ]
+        let activityViewController = UIActivityViewController(activityItems: itemsToShare,
+                                                              applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+        activityViewController.popoverPresentationController?.barButtonItem = sender
+        activityViewController.setValue(text, forKey: "Subject")
+        
+        // present the view controller
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+    
     func fetchEventDetails(for eventId:Int) -> Void {
         
         MBProgressHUD.showAdded(to: self.view, animated: true)

@@ -719,63 +719,67 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pj5-r6-PEH">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalCentering" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="feZ-or-DyI">
-                                        <rect key="frame" x="10" y="0.0" width="355" height="60"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wm2-9e-8Kg">
-                                                <rect key="frame" x="0.0" y="15" width="88" height="30"/>
-                                                <state key="normal">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Scan Tickets">
-                                                            <attributes>
-                                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <font key="NSFont" metaFont="system" size="15"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="tMr-Pt-dpb" kind="show" id="ioU-LT-3F8"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojd-WM-PAU" userLabel="Separation Label">
-                                                <rect key="frame" x="170" y="0.0" width="1" height="60"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="1" id="12H-JW-5Px"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uV4-RR-1Xj">
-                                                <rect key="frame" x="239" y="15" width="116" height="30"/>
-                                                <state key="normal">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Manual Check-In">
-                                                            <attributes>
-                                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <font key="NSFont" metaFont="system" size="15"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="HFR-da-Xe9" kind="show" id="Xcm-Zn-lE7"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wm2-9e-8Kg">
+                                        <rect key="frame" x="8" y="0.0" width="171" height="60"/>
+                                        <state key="normal" image="Scan">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Scan Tickets">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="15" name=".SFNSText"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <segue destination="tMr-Pt-dpb" kind="show" id="ioU-LT-3F8"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojd-WM-PAU" userLabel="Separation Label">
+                                        <rect key="frame" x="187" y="8" width="1" height="44"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="12H-JW-5Px"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uV4-RR-1Xj">
+                                        <rect key="frame" x="196" y="0.0" width="171" height="60"/>
+                                        <state key="normal" image="ManualCheckin">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Manual Check-In">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <segue destination="HFR-da-Xe9" kind="show" id="Xcm-Zn-lE7"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="feZ-or-DyI" firstAttribute="top" secondItem="pj5-r6-PEH" secondAttribute="top" id="1jd-5i-7JS"/>
-                                    <constraint firstAttribute="bottom" secondItem="feZ-or-DyI" secondAttribute="bottom" id="7lL-FX-Tkz"/>
+                                    <constraint firstItem="Wm2-9e-8Kg" firstAttribute="height" secondItem="uV4-RR-1Xj" secondAttribute="height" id="3Nf-wS-MWk"/>
+                                    <constraint firstItem="Wm2-9e-8Kg" firstAttribute="centerY" secondItem="pj5-r6-PEH" secondAttribute="centerY" id="41L-Qf-B7I"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ojd-WM-PAU" secondAttribute="bottom" constant="8" id="6jU-Dg-MKm"/>
+                                    <constraint firstItem="Ojd-WM-PAU" firstAttribute="leading" secondItem="Wm2-9e-8Kg" secondAttribute="trailing" constant="8" id="Kf0-Od-OG9"/>
+                                    <constraint firstItem="Ojd-WM-PAU" firstAttribute="top" secondItem="pj5-r6-PEH" secondAttribute="top" constant="8" id="LLI-Fu-pwk"/>
+                                    <constraint firstItem="Wm2-9e-8Kg" firstAttribute="leading" secondItem="pj5-r6-PEH" secondAttribute="leading" constant="8" id="UAO-MW-G85"/>
+                                    <constraint firstItem="Wm2-9e-8Kg" firstAttribute="height" secondItem="pj5-r6-PEH" secondAttribute="height" id="V87-JX-eFK"/>
                                     <constraint firstAttribute="height" constant="60" id="blr-W0-tfV"/>
-                                    <constraint firstAttribute="trailing" secondItem="feZ-or-DyI" secondAttribute="trailing" constant="10" id="dFv-6t-ozG"/>
-                                    <constraint firstItem="feZ-or-DyI" firstAttribute="leading" secondItem="pj5-r6-PEH" secondAttribute="leading" constant="10" id="ewn-lh-WbX"/>
+                                    <constraint firstAttribute="trailing" secondItem="uV4-RR-1Xj" secondAttribute="trailing" constant="8" id="cBl-vK-3Qk"/>
+                                    <constraint firstItem="Ojd-WM-PAU" firstAttribute="centerX" secondItem="pj5-r6-PEH" secondAttribute="centerX" id="j6o-jv-hcv"/>
+                                    <constraint firstItem="uV4-RR-1Xj" firstAttribute="centerY" secondItem="pj5-r6-PEH" secondAttribute="centerY" id="j9C-Fg-FeR"/>
+                                    <constraint firstItem="Ojd-WM-PAU" firstAttribute="centerY" secondItem="pj5-r6-PEH" secondAttribute="centerY" id="pOz-wD-WFk"/>
+                                    <constraint firstItem="Wm2-9e-8Kg" firstAttribute="width" secondItem="uV4-RR-1Xj" secondAttribute="width" id="weH-iR-2FB"/>
+                                    <constraint firstItem="uV4-RR-1Xj" firstAttribute="leading" secondItem="Ojd-WM-PAU" secondAttribute="trailing" constant="8" id="yYY-GS-pMt"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -964,6 +968,8 @@
     </scenes>
     <resources>
         <image name="Background" width="375" height="667"/>
+        <image name="ManualCheckin" width="16" height="16"/>
+        <image name="Scan" width="16" height="16"/>
         <image name="Share" width="22" height="22"/>
     </resources>
 </document>

@@ -456,6 +456,9 @@
                         <viewLayoutGuide key="safeArea" id="2kL-WQ-JcN"/>
                     </view>
                     <navigationItem key="navigationItem" title="Event Details" id="S5m-Cs-SKf">
+                        <barButtonItem key="leftBarButtonItem" image="BackArrow" id="Gxg-uF-X02">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="Share" id="gqh-v4-8mV"/>
                     </navigationItem>
                     <connections>
@@ -473,7 +476,7 @@
             </objects>
             <point key="canvasLocation" x="481" y="131"/>
         </scene>
-        <!--Event Day Tool-->
+        <!--Event Day Tools-->
         <scene sceneID="aAL-kk-eqX">
             <objects>
                 <viewController storyboardIdentifier="EventDayToolsViewController" id="jfd-2q-m1N" customClass="EventDayToolsViewController" customModule="Billetes" customModuleProvider="target" sceneMemberID="viewController">
@@ -733,7 +736,7 @@
                                             </attributedString>
                                         </state>
                                         <connections>
-                                            <segue destination="tMr-Pt-dpb" kind="show" id="ioU-LT-3F8"/>
+                                            <action selector="scanTicketsTapped:" destination="jfd-2q-m1N" eventType="touchUpInside" id="TKs-83-xsd"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojd-WM-PAU" userLabel="Separation Label">
@@ -760,7 +763,7 @@
                                             </attributedString>
                                         </state>
                                         <connections>
-                                            <segue destination="HFR-da-Xe9" kind="show" id="Xcm-Zn-lE7"/>
+                                            <action selector="manualCheckInTapped:" destination="jfd-2q-m1N" eventType="touchUpInside" id="gqi-Wa-avH"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -811,7 +814,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xT1-49-XxI"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Event Day Tool" id="eSP-5C-ZWF"/>
+                    <navigationItem key="navigationItem" title="Event Day Tools" id="eSP-5C-ZWF">
+                        <barButtonItem key="leftBarButtonItem" image="BackArrow" id="tcy-sd-FFx">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="checkInSummaryProgressView" destination="xlE-21-5uM" id="eDB-5a-CKd"/>
                         <outlet property="checkedInLabel" destination="5m0-iG-aB3" id="ueS-wT-TC7"/>
@@ -850,7 +857,7 @@
             </objects>
             <point key="canvasLocation" x="-951" y="131"/>
         </scene>
-        <!--Manual Check In View Controller-->
+        <!--Manual Check-In-->
         <scene sceneID="wTZ-hM-47u">
             <objects>
                 <viewController storyboardIdentifier="ManualCheckInViewController" id="HFR-da-Xe9" customClass="ManualCheckInViewController" customModule="Billetes" customModuleProvider="target" sceneMemberID="viewController">
@@ -941,7 +948,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="552-q8-CWh"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zgl-Mg-7bA"/>
+                    <navigationItem key="navigationItem" title="Manual Check-In" id="rBF-7Y-yQJ">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="rxQ-HC-FHy"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="attendeesTableView" destination="jZM-Ez-eRm" id="m4q-5b-ApF"/>
                     </connections>
@@ -950,23 +959,29 @@
             </objects>
             <point key="canvasLocation" x="1897" y="131"/>
         </scene>
-        <!--Code Scanner View Controller-->
+        <!--Scan Tickets-->
         <scene sceneID="yhK-jY-yPu">
             <objects>
-                <viewController id="tMr-Pt-dpb" customClass="QRCodeScannerViewController" customModule="Billetes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QRCodeScannerViewController" id="tMr-Pt-dpb" customClass="QRCodeScannerViewController" customModule="Billetes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yqm-nl-hnZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="U9r-kl-gYI"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Scan Tickets" id="jtJ-gA-mK7">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="WKT-Jo-INv"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7G-W2-iyC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001" y="900"/>
+            <point key="canvasLocation" x="1140" y="896"/>
         </scene>
     </scenes>
     <resources>
+        <image name="BackArrow" width="22" height="22"/>
         <image name="Background" width="375" height="667"/>
         <image name="ManualCheckin" width="16" height="16"/>
         <image name="Scan" width="16" height="16"/>

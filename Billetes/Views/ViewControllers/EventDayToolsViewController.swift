@@ -43,6 +43,20 @@ class EventDayToolsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func scanTicketsTapped(_ sender: Any) {
+        
+        let codeScannerViewController = storyboard?.instantiateViewController(withIdentifier: "QRCodeScannerViewController") as! QRCodeScannerViewController
+        
+        navigationController?.pushViewController(codeScannerViewController, animated: true)
+    }
+    
+    @IBAction func manualCheckInTapped(_ sender: Any) {
+     
+        let manualCheckInViewController = storyboard?.instantiateViewController(withIdentifier: "ManualCheckInViewController") as! ManualCheckInViewController
+        
+        navigationController?.pushViewController(manualCheckInViewController, animated: true)
+    }
+    
     func fetchEventDayTools(for eventId:Int) -> Void {
         
         MBProgressHUD.showAdded(to: self.view, animated: true)

@@ -77,11 +77,11 @@ class EventDetailsViewController: UIViewController {
                 }
                 
                 Alamofire.request(eventDetail.thumbnailURL!).response { response in
-                    if let data = response.data {
-                        let image = UIImage(data: data)
+                    if let data = response.data, let image = UIImage(data: data){
                         self.eventImageView.image = image
-                    } else {
-                        //TODO: assign no photo image.
+                    }
+                    else {
+                        self.eventImageView.image = UIImage(named: "EventListPlaceHolder")
                     }
                 }
                 

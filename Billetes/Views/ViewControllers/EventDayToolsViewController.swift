@@ -92,12 +92,11 @@ class EventDayToolsViewController: UIViewController {
             return
         }
         Alamofire.request(url).response { response in
-            if let data = response.data {
-                if let image = UIImage(data: data) {
-                    self.eventImageView.image = image
-                }
-            } else {
-                //TODO: assign no photo image.
+            if let data = response.data, let image = UIImage(data: data){
+                self.eventImageView.image = image
+            }
+            else {
+                self.eventImageView.image = UIImage(named: "EventListPlaceHolder")
             }
         }
     }

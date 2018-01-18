@@ -144,6 +144,7 @@
                         <viewLayoutGuide key="safeArea" id="9Lf-w4-ODK"/>
                     </view>
                     <navigationItem key="navigationItem" title="Events" id="9gP-BT-xxD">
+                        <barButtonItem key="backBarButtonItem" title=" " id="0H3-bb-XAE"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="XUe-eu-pqn">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
@@ -456,6 +457,7 @@
                         <viewLayoutGuide key="safeArea" id="2kL-WQ-JcN"/>
                     </view>
                     <navigationItem key="navigationItem" title="Event Details" id="S5m-Cs-SKf">
+                        <barButtonItem key="backBarButtonItem" title=" " id="N2J-kb-8PA"/>
                         <barButtonItem key="rightBarButtonItem" image="Share" id="gqh-v4-8mV"/>
                     </navigationItem>
                     <connections>
@@ -811,7 +813,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xT1-49-XxI"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Event Day Tools" id="eSP-5C-ZWF"/>
+                    <navigationItem key="navigationItem" title="Event Day Tools" id="eSP-5C-ZWF">
+                        <barButtonItem key="backBarButtonItem" title=" " id="suX-bj-K76"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="checkInSummaryProgressView" destination="xlE-21-5uM" id="eDB-5a-CKd"/>
                         <outlet property="checkedInLabel" destination="5m0-iG-aB3" id="ueS-wT-TC7"/>

@@ -456,7 +456,7 @@
                         <viewLayoutGuide key="safeArea" id="2kL-WQ-JcN"/>
                     </view>
                     <navigationItem key="navigationItem" title="Event Details" id="S5m-Cs-SKf">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="gqh-v4-8mV"/>
+                        <barButtonItem key="rightBarButtonItem" image="Share" id="gqh-v4-8mV"/>
                     </navigationItem>
                     <connections>
                         <outlet property="amountLabel" destination="OQX-rg-94O" id="ld5-ZP-cfF"/>
@@ -964,5 +964,6 @@
     </scenes>
     <resources>
         <image name="Background" width="375" height="667"/>
+        <image name="Share" width="22" height="22"/>
     </resources>
 </document>

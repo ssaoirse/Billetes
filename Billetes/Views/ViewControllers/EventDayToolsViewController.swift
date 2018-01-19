@@ -53,7 +53,7 @@ class EventDayToolsViewController: UIViewController {
     @IBAction func manualCheckInTapped(_ sender: Any) {
      
         let manualCheckInViewController = storyboard?.instantiateViewController(withIdentifier: "ManualCheckInViewController") as! ManualCheckInViewController
-        
+        manualCheckInViewController.eventID = self.eventID
         navigationController?.pushViewController(manualCheckInViewController, animated: true)
     }
     

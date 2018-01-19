@@ -291,6 +291,14 @@ class EventsController: NSObject {
                                             email: email)
                     attendees.append(attendee)
                 }
+                
+                // sort the array if it has elements.
+                if attendees.count > 1 {
+                    attendees.sort(by: { (attendee1, attendee2) -> Bool in
+                        return attendee1.name < attendee2.name
+                    })
+                }
+                
                 // notify success.
                 success(attendees)
                 return

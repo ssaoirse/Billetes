@@ -14,6 +14,10 @@ class EventDayToolsViewController: UIViewController {
 
     var eventID = 0
     var eventImageURL: String? = nil
+    
+    var attendeesCheckedIn: Int = 0
+    var totalAttendees: Int = 0
+    var reloadProgressView: Bool = false
 
     @IBOutlet weak var eventImageView: UIImageView!
     @IBOutlet weak var eventNameLabel: UILabel!
@@ -43,6 +47,15 @@ class EventDayToolsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        // Reload progress view if flag is set.
+        // This used to update progress after change in manual scan.
+        if reloadProgressView {
+            reloadProgressView = false
+            updateProgress()
+        }
+    }
+    
     @IBAction func scanTicketsTapped(_ sender: Any) {
         
         let codeScannerViewController = storyboard?.instantiateViewController(withIdentifier: "QRCodeScannerViewController") as! QRCodeScannerViewController
@@ -54,6 +67,7 @@ class EventDayToolsViewController: UIViewController {
      
         let manualCheckInViewController = storyboard?.instantiateViewController(withIdentifier: "ManualCheckInViewController") as! ManualCheckInViewController
         manualCheckInViewController.eventID = self.eventID
+        manualCheckInViewController.checkinDelegate = self
         navigationController?.pushViewController(manualCheckInViewController, animated: true)
     }
     
@@ -88,8 +102,12 @@ class EventDayToolsViewController: UIViewController {
                 
                 self.eventDateLabel.text = displayDateString
                 
-                self.checkedInLabel.text = String(eventDayTools.checkedIn)
-                self.notCheckedInLabel.text = String(eventDayTools.notCheckedIn)
+                // Set attendee counts.
+                self.attendeesCheckedIn = eventDayTools.checkedIn
+                self.totalAttendees = self.attendeesCheckedIn + eventDayTools.notCheckedIn
+                
+                // Update the Progress
+                self.updateProgress()
                 
                 MBProgressHUD.hide(for: self.view, animated: true)
         },
@@ -115,4 +133,38 @@ class EventDayToolsViewController: UIViewController {
         }
     }
     
+    // Update Progress:
+    func updateProgress() {
+        // Set values for attendees checkedin, total etc.
+        let notCheckedIn = self.totalAttendees - self.attendeesCheckedIn
+        
+        // Set Labels:
+        self.checkedInLabel.text = String(self.attendeesCheckedIn)
+        self.notCheckedInLabel.text = String(notCheckedIn)
+        
+        // Set Progress:
+        if self.totalAttendees <= 0 {
+            return
+        }
+        // Compute proportion of attendees against the total attendees.
+        let progress = Float(self.attendeesCheckedIn) / Float(self.totalAttendees)
+        checkInSummaryProgressView.progress = progress
+    }
+}
+
+
+// MARK:- AttendeeCheckinDelegate
+extension EventDayToolsViewController: AttendeeCheckinDelegate {
+    
+    func didCheckinAttendees(for eventId: Int, attendeeIds: [Int]) {
+        
+        // Update the Progress values.
+        let newCheckins = attendeeIds.count
+        if newCheckins <= 0 {
+            return
+        }
+        self.attendeesCheckedIn += newCheckins
+        // Set the flag to update progress.
+        self.reloadProgressView = true
+    }
 }

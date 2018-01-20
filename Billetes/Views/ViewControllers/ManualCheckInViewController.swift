@@ -18,6 +18,9 @@ class ManualCheckInViewController: UIViewController {
     var attendees = [Attendee]()
     var filteredAttendees = [Attendee]()
     
+    // Delegate to notify when a new attendee is marked as checked in.
+    weak var checkinDelegate: AttendeeCheckinDelegate?
+    
     // Search controller.
     // use the same view to display results.
     let searchController = UISearchController(searchResultsController: nil)
@@ -160,6 +163,10 @@ extension ManualCheckInViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        // TODO:
+        // Checkin the selected attendee/s and notify the change after successful checkin.
+        //let idArray = [1, 2, 3, 4, 5, 6, 7, 8 , 9 , 10]
+        //self.checkinDelegate?.didCheckinAttendees(for: self.eventID, attendeeIds: idArray)
         
     }
 }

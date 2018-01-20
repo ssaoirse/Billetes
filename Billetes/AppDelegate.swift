@@ -18,10 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Override point for customization after application launch.
         
-        let storyboard = UIStoryboard(name: Constants.kStoryboard_Login, bundle: nil)
-        
-        // instantiate your desired ViewController
-        let rootViewController = storyboard.instantiateViewController(withIdentifier: Constants.kViewController_Login)
+        // Check if User is already logged in.
+        let rootViewController : UIViewController
+        if Settings.sharedInstance.isLoggedIn() {
+            let storyboard = UIStoryboard(name: Constants.kStoryboard_Base, bundle: nil)
+            rootViewController = storyboard.instantiateViewController(withIdentifier: Constants.kViewController_Base)
+        }
+        else {
+            let storyboard = UIStoryboard(name: Constants.kStoryboard_Login, bundle: nil)
+            rootViewController = storyboard.instantiateViewController(withIdentifier: Constants.kViewController_Login)
+        }
         
         if let window = self.window {
             window.rootViewController = rootViewController

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04000C602013880900410DE8 /* AttendeeCheckinDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04000C5F2013880900410DE8 /* AttendeeCheckinDelegate.swift */; };
 		0409DCEB200695180057D848 /* Attendee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409DCEA200695180057D848 /* Attendee.swift */; };
 		043AA9CD2003C52D005B1CBC /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043AA9CC2003C52D005B1CBC /* EventsController.swift */; };
 		043AA9CF2003CB5C005B1CBC /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043AA9CE2003CB5C005B1CBC /* Event.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04000C5F2013880900410DE8 /* AttendeeCheckinDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeCheckinDelegate.swift; sourceTree = "<group>"; };
 		0409DCEA200695180057D848 /* Attendee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendee.swift; sourceTree = "<group>"; };
 		043AA9CC2003C52D005B1CBC /* EventsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
 		043AA9CE2003CB5C005B1CBC /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				046D12A0200117A400FEFE59 /* LoginController.swift */,
 				0489077420022506004D0F7B /* Settings.swift */,
 				043AA9CC2003C52D005B1CBC /* EventsController.swift */,
+				04000C5F2013880900410DE8 /* AttendeeCheckinDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				046D126F2000FD7500FEFE59 /* AppDelegate.swift in Sources */,
 				04ACD495200BAD1900B9A50D /* AttendeeTableViewCell.swift in Sources */,
 				046D12912001040A00FEFE59 /* EventsViewController.swift in Sources */,
+				04000C602013880900410DE8 /* AttendeeCheckinDelegate.swift in Sources */,
 				046D129C2001047600FEFE59 /* BaseMenuViewController.swift in Sources */,
 				0489077520022506004D0F7B /* Settings.swift in Sources */,
 				046D12962001041800FEFE59 /* Constants.swift in Sources */,

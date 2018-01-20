@@ -23,6 +23,7 @@ class ManualCheckInViewController: UIViewController {
     let searchController = UISearchController(searchResultsController: nil)
     
     @IBOutlet weak var attendeesTableView: UITableView!
+    @IBOutlet weak var noAttendeesLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -123,10 +124,23 @@ class ManualCheckInViewController: UIViewController {
 extension ManualCheckInViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let attendeeCount: Int
         if isFiltering() {
-            return self.filteredAttendees.count
+            attendeeCount = filteredAttendees.count
         }
-        return self.attendees.count
+        else {
+            attendeeCount = attendees.count
+        }
+        
+        // Show no attendees label if count is 0
+        if attendeeCount == 0 {
+            noAttendeesLabel.isHidden = false
+        }
+        else {
+            noAttendeesLabel.isHidden = true
+        }
+        
+        return attendeeCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

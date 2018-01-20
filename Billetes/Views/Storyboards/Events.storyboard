@@ -935,6 +935,12 @@
                                     <outlet property="delegate" destination="HFR-da-Xe9" id="dy8-4W-vwy"/>
                                 </connections>
                             </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No attendees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ip-97-bKc">
+                                <rect key="frame" x="136" y="323" width="102.5" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -945,13 +951,16 @@
                             <constraint firstItem="552-q8-CWh" firstAttribute="bottom" secondItem="jZM-Ez-eRm" secondAttribute="bottom" constant="15" id="cdK-RG-nKB"/>
                             <constraint firstItem="552-q8-CWh" firstAttribute="trailing" secondItem="jZM-Ez-eRm" secondAttribute="trailing" constant="15" id="dHe-Ba-H81"/>
                             <constraint firstItem="jZM-Ez-eRm" firstAttribute="leading" secondItem="552-q8-CWh" secondAttribute="leading" constant="15" id="mwt-iy-vI5"/>
+                            <constraint firstItem="7Ip-97-bKc" firstAttribute="centerX" secondItem="g24-gM-eBO" secondAttribute="centerX" id="oys-d5-aaz"/>
                             <constraint firstItem="Dyb-M3-A97" firstAttribute="top" secondItem="552-q8-CWh" secondAttribute="top" id="sc6-wy-34U"/>
+                            <constraint firstItem="7Ip-97-bKc" firstAttribute="centerY" secondItem="g24-gM-eBO" secondAttribute="centerY" id="t6x-4a-f00"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="552-q8-CWh"/>
                     </view>
                     <navigationItem key="navigationItem" title="Manual Check-In" id="rBF-7Y-yQJ"/>
                     <connections>
                         <outlet property="attendeesTableView" destination="jZM-Ez-eRm" id="m4q-5b-ApF"/>
+                        <outlet property="noAttendeesLabel" destination="7Ip-97-bKc" id="1Yl-Ui-egB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bug-oh-JwE" userLabel="First Responder" sceneMemberID="firstResponder"/>

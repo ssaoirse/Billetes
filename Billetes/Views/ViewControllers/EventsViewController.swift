@@ -65,25 +65,32 @@ class EventsViewController: BaseMenuViewController {
         
         MBProgressHUD.showAdded(to: self.view, animated: true)
         let eventsController = EventsController()
+        
         eventsController.getEvents(
-            success: { upcomingEvents, pastEvents  in
-                
-                print("Upcoming events: \n", upcomingEvents, "\n\n")
-                print("Past events: \n", pastEvents, "\n\n")
+        success: { upcomingEvents, pastEvents  in
+            
+            print("Upcoming events: \n", upcomingEvents, "\n\n")
+            print("Past events: \n", pastEvents, "\n\n")
 
-                self.upcomingEventsArray = upcomingEvents
-                self.pastEventsArray = pastEvents
-                
-                self.eventsTableView.reloadData()
-                self.manageNoDataLabel()
-                MBProgressHUD.hide(for: self.view, animated: true)
+            self.upcomingEventsArray = upcomingEvents
+            self.pastEventsArray = pastEvents
+            
+            self.eventsTableView.reloadData()
+            self.manageNoDataLabel()
+            MBProgressHUD.hide(for: self.view, animated: true)
                 
         },
-            failure: { (message) in
-                if let msg = message {
-                    print(msg)
-                    MBProgressHUD.hide(for: self.view, animated: true)
-                }
+        failure: { (message) in
+            if let msg = message {
+                MBProgressHUD.hide(for: self.view, animated: true)
+                let alertView = UIAlertController.init(title: Bundle().displayName,
+                                                      message: msg,
+                                                      preferredStyle: UIAlertControllerStyle.alert)
+                alertView.addAction(UIAlertAction(title: Constants.kAlert_OK,
+                                                  style: UIAlertActionStyle.default,
+                                                  handler: nil))
+                self.present(alertView, animated: true, completion: nil)
+            }
         })
     }
     

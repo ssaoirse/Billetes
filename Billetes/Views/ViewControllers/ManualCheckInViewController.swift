@@ -13,6 +13,7 @@ class ManualCheckInViewController: UIViewController {
     
     // property to be set by the caller.
     var eventID = 0
+    var notCheckedInOnly: Bool = false
     
     // holds the list of all attendees
     var attendees = [Attendee]()
@@ -81,7 +82,16 @@ class ManualCheckInViewController: UIViewController {
         let eventsController = EventsController()
         eventsController.getAttendees(for: eventId,
         success: { attendees in
-            self.attendees = attendees
+            
+            // Filter the list if only not checked in attendees are to be listed.
+            if self.notCheckedInOnly {
+                self.attendees = attendees.filter{ (attendee) -> Bool in
+                    return !(attendee.isCheckedIn)
+                }
+            }
+            else {
+                self.attendees = attendees
+            }
             MBProgressHUD.hide(for: self.view, animated: true)
             self.attendeesTableView.reloadData()
         },

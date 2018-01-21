@@ -75,6 +75,13 @@ class EventDayToolsViewController: UIViewController {
     
     // List remaining Attendees:
     @IBAction func didTapListRemainingAttendees(_ sender: UIButton) {
+        // Open manual checkin list with list showing remaining attendees only.
+        let manualCheckInViewController = storyboard?.instantiateViewController(withIdentifier: "ManualCheckInViewController") as! ManualCheckInViewController
+        manualCheckInViewController.eventID = self.eventID
+        manualCheckInViewController.checkinDelegate = self
+        // Set flag.
+        manualCheckInViewController.notCheckedInOnly = true
+        navigationController?.pushViewController(manualCheckInViewController, animated: true)
     }
     
     // Email Remaining Attendees:

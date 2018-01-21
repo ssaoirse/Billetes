@@ -42,7 +42,7 @@
 		043AA9CC2003C52D005B1CBC /* EventsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
 		043AA9CE2003CB5C005B1CBC /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		043AA9D02003E1ED005B1CBC /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
-		046D126B2000FD7500FEFE59 /* Billetes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Billetes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		046D126B2000FD7500FEFE59 /* Boletos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boletos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		046D126E2000FD7500FEFE59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		046D12752000FD7500FEFE59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		046D12782000FD7500FEFE59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 		046D126C2000FD7500FEFE59 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				046D126B2000FD7500FEFE59 /* Billetes.app */,
+				046D126B2000FD7500FEFE59 /* Boletos.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -219,7 +219,7 @@
 			);
 			name = Billetes;
 			productName = Billetes;
-			productReference = 046D126B2000FD7500FEFE59 /* Billetes.app */;
+			productReference = 046D126B2000FD7500FEFE59 /* Boletos.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -500,7 +500,7 @@
 				INFOPLIST_FILE = Billetes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.boletos.Billetes;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Boletos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -519,7 +519,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[arch=*]" = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.boletos.Billetes;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Boletos;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

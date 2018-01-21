@@ -238,10 +238,10 @@ class EventDayToolsViewController: UIViewController {
 // MARK:- AttendeeCheckinDelegate
 extension EventDayToolsViewController: AttendeeCheckinDelegate {
     
-    func didCheckinAttendees(for eventId: Int, attendeeIds: [Int]) {
+    func didCheckinAttendees(for eventId: Int, ticketNumbers: [String]) {
         
         // Update the Progress values.
-        let newCheckins = attendeeIds.count
+        let newCheckins = ticketNumbers.count
         if newCheckins <= 0 {
             return
         }

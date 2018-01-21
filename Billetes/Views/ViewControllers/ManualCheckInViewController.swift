@@ -189,23 +189,51 @@ extension ManualCheckInViewController: UITableViewDelegate, UITableViewDataSourc
             return
         }
         
-        // Else intiate service to checkin the attendee.
-        attendee.isCheckedIn = true;
-        if self.isFiltering() {
-            self.filteredAttendees[indexPath.row] = attendee
+        let ticketNumber = attendee.ticketNumber
+        let email = attendee.email ?? ""
+        self.checkinAttendee(at: indexPath, ticketNumber: ticketNumber, email: email)
+    }
+    
+    
+    // checkin selected attendee:
+    func checkinAttendee(at indexPath: IndexPath, ticketNumber: String, email: String) {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        let attendeeCheckinController = AttendeeCheckinController()
+        attendeeCheckinController.checkinAttendee(with: ticketNumber,
+                                                  email: email,
+                                                  status: true)
+        { (checkedIn, message) in
+            // Attendee checkin successfully
+            if checkedIn {
+                
+                var attendee : Attendee
+                if self.isFiltering() {
+                    attendee = self.filteredAttendees[indexPath.row]
+                    attendee.isCheckedIn = true
+                    self.filteredAttendees[indexPath.row] = attendee
+                }
+                else {
+                    attendee = self.attendees[indexPath.row]
+                    attendee.isCheckedIn = true
+                    self.attendees[indexPath.row] = attendee
+                }
+                
+                // Notify the listener about the new checkin.
+                var ticketArray  = [String]()
+                ticketArray.append(ticketNumber)
+                self.checkinDelegate?.didCheckinAttendees(for: self.eventID, ticketNumbers: ticketArray)
+                
+                MBProgressHUD.hide(for: self.view, animated: true)
+                self.attendeesTableView.reloadData()
+            }
+            else {
+                MBProgressHUD.hide(for: self.view, animated: true)
+                if let msg = message {
+                    print(msg)
+                }
+                
+            }
         }
-        else {
-            self.attendees[indexPath.row] = attendee
-        }
-        
-        let cell = tableView.cellForRow(at: indexPath) as! AttendeeTableViewCell
-        cell.updateCheckInStatus(with: true)
-        
-        // TODO:
-        // Checkin the selected attendee/s and notify the change after successful checkin.
-        //let idArray = [1, 2, 3, 4, 5, 6, 7, 8 , 9 , 10]
-        //self.checkinDelegate?.didCheckinAttendees(for: self.eventID, attendeeIds: idArray)
-        
     }
 }
 

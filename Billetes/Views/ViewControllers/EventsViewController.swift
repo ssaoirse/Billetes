@@ -108,6 +108,7 @@ class EventsViewController: BaseMenuViewController {
     }
     
     func checkinAttendee() {
+        /*
         let eventsController = EventsController()
         eventsController.checkinAttendee(
             with: "1032955",
@@ -116,6 +117,7 @@ class EventsViewController: BaseMenuViewController {
             completion: { (success, message) in
                 
         })
+         */
     }
 }
 

@@ -14,7 +14,8 @@ class AttendeeTableViewCell: UITableViewCell {
     @IBOutlet weak var admissionStatus: UILabel!
     @IBOutlet weak var ticketNumber: UILabel!
     @IBOutlet weak var attendeeBackgroundView: UIView!
-
+    @IBOutlet weak var checkInStatusImageView: UIImageView!
+    
     override func awakeFromNib() {
         
         super.awakeFromNib()

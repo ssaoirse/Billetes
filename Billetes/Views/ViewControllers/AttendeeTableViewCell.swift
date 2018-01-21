@@ -41,5 +41,15 @@ class AttendeeTableViewCell: UITableViewCell {
         self.admissionStatus.text = attendee.admissionStatus
         self.ticketNumber.text = attendee.ticketNumber
     }
+    
+    // Updates the checkin status.
+    func updateCheckInStatus(with status: Bool) -> Void {
+        if status {
+            self.checkInStatusImageView?.image = UIImage(named: "CheckedIn")
+        }
+        else {
+            self.checkInStatusImageView?.image = UIImage(named: "NotCheckedIn")
+        }
+    }
 
 }

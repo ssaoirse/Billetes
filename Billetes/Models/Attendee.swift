@@ -12,7 +12,7 @@ import Foundation
 struct Attendee {
     let name: String
     let ticketNumber: String
-    let isCheckedIn: Bool
+    var isCheckedIn: Bool
     let admissionStatus: String
     let email: String?
     

@@ -158,10 +158,38 @@ extension ManualCheckInViewController: UITableViewDelegate, UITableViewDataSourc
         }
         
         cell.configureCell(with: attendee)
+        
+        // Update checkin status.
+        cell.updateCheckInStatus(with: attendee.isCheckedIn)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        var attendee : Attendee
+        if self.isFiltering() {
+            attendee = self.filteredAttendees[indexPath.row]
+        }
+        else {
+            attendee = self.attendees[indexPath.row]
+        }
+        
+        // Do nothing if already checked in.
+        if attendee.isCheckedIn {
+            return
+        }
+        
+        // Else intiate service to checkin the attendee.
+        attendee.isCheckedIn = true;
+        if self.isFiltering() {
+            self.filteredAttendees[indexPath.row] = attendee
+        }
+        else {
+            self.attendees[indexPath.row] = attendee
+        }
+        
+        let cell = tableView.cellForRow(at: indexPath) as! AttendeeTableViewCell
+        cell.updateCheckInStatus(with: true)
         
         // TODO:
         // Checkin the selected attendee/s and notify the change after successful checkin.

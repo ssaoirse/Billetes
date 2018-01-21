@@ -9,6 +9,8 @@
 import UIKit
 import Alamofire
 import MBProgressHUD
+import MessageUI
+
 
 class EventDayToolsViewController: UIViewController {
 
@@ -69,6 +71,46 @@ class EventDayToolsViewController: UIViewController {
         manualCheckInViewController.eventID = self.eventID
         manualCheckInViewController.checkinDelegate = self
         navigationController?.pushViewController(manualCheckInViewController, animated: true)
+    }
+    
+    // List remaining Attendees:
+    @IBAction func didTapListRemainingAttendees(_ sender: UIButton) {
+    }
+    
+    // Email Remaining Attendees:
+    @IBAction func didTapEmailRemainingAttendees(_ sender: UIButton) {
+        // Do nothing if all attendees have checked in.
+        if self.totalAttendees - self.attendeesCheckedIn == 0 {
+            return
+        }
+        
+        // Fetch Attendees:
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        let eventsController = EventsController()
+        eventsController.getAttendees(for: self.eventID,
+        success: { attendees in
+            // Filter attendees who have not checked in
+            if attendees.count == 0 {
+                MBProgressHUD.hide(for: self.view, animated: true)
+                self.showAlert(with: "No remaining attendees")
+                return
+            }
+            
+            let notCheckedIn = attendees.filter{ (attendee) -> Bool in
+                // return true if attendee not checked in and has email address
+                return(!attendee.isCheckedIn && !(attendee.email?.isEmpty)!)
+            }
+            .flatMap{ (attendee) -> String? in
+                attendee.email
+            }
+            
+            MBProgressHUD.hide(for: self.view, animated: true)
+            self.sendEmail(to: notCheckedIn)
+        },
+        failure: { (message) in
+            MBProgressHUD.hide(for: self.view, animated: true)
+            self.showAlert(with: message)
+        })
     }
     
     func fetchEventDayTools(for eventId:Int) -> Void {
@@ -150,6 +192,39 @@ class EventDayToolsViewController: UIViewController {
         let progress = Float(self.attendeesCheckedIn) / Float(self.totalAttendees)
         checkInSummaryProgressView.progress = progress
     }
+    
+    // Show alert:
+    func showAlert(with message: String?) {
+        guard let msg = message else {
+            return
+        }
+        let alertView = UIAlertController.init(title: Bundle().displayName,
+                                               message: msg,
+                                               preferredStyle: UIAlertControllerStyle.alert)
+        alertView.addAction(UIAlertAction(title: Constants.kAlert_OK,
+                                          style: UIAlertActionStyle.default,
+                                          handler: nil))
+        self.present(alertView, animated: true, completion: nil)
+    }
+    
+    // MARK:- SEND EMAIL:
+    //
+    // TODO:
+    // Max number of email addresses to be checked. Email to be sent to all not checked in recipients.
+    func sendEmail(to recipients: [String]) {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            //mail.setToRecipients(recipients)
+            mail.setBccRecipients(recipients)
+            mail.setSubject("Boletos " + self.eventNameLabel.text!)
+            present(mail, animated: true)
+        }
+        else {
+            // show failure alert
+            self.showAlert(with: "Unable to send email")
+        }
+    }
 }
 
 
@@ -168,3 +243,13 @@ extension EventDayToolsViewController: AttendeeCheckinDelegate {
         self.reloadProgressView = true
     }
 }
+
+
+// MARK: - MFMailComposeViewControllerDelegate
+extension EventDayToolsViewController: MFMailComposeViewControllerDelegate {
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+}
+

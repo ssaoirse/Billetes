@@ -281,7 +281,7 @@ class EventsController: NSObject {
                     let name = item[Constants.kNameKey].stringValue
                     let ticketNumber = item[Constants.kTicketNumKey].stringValue
                     let admissionStatus = item[Constants.kAdmissionStatusKey].stringValue
-                    let isCheckedIn = item[Constants.kAdmissionStatusKey].boolValue
+                    let isCheckedIn = item[Constants.kIsCheckedInKey].boolValue
                     let email = item[Constants.kEmailKey].string
                     
                     let attendee = Attendee(name: name,

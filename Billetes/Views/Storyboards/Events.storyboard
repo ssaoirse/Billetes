@@ -653,7 +653,7 @@
                                             <constraint firstItem="5m0-iG-aB3" firstAttribute="leading" secondItem="7ii-Dr-il2" secondAttribute="leading" id="tmz-30-5RT"/>
                                         </constraints>
                                     </view>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xlE-21-5uM">
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xlE-21-5uM">
                                         <rect key="frame" x="10" y="100" width="325" height="10"/>
                                         <color key="tintColor" red="0.70196078429999997" green="0.14117647059999999" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>

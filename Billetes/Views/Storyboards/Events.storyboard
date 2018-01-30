@@ -889,20 +889,20 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y56-J4-fJo">
                                                     <rect key="frame" x="0.0" y="0.0" width="345" height="90"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVG-31-yQf" userLabel="AttendeeName">
-                                                            <rect key="frame" x="10" y="10" width="37" height="18"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZVG-31-yQf" userLabel="AttendeeName">
+                                                            <rect key="frame" x="10" y="10" width="280" height="18"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYO-aP-ZHd" userLabel="AdmissionStatus">
-                                                            <rect key="frame" x="10" y="36" width="32" height="16"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tYO-aP-ZHd" userLabel="AdmissionStatus">
+                                                            <rect key="frame" x="10" y="36" width="280" height="16"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                             <color key="textColor" white="0.33000000000000002" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfw-wM-wQH" userLabel="TicketNumber">
-                                                            <rect key="frame" x="10" y="55" width="32" height="16"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hfw-wM-wQH" userLabel="TicketNumber">
+                                                            <rect key="frame" x="10" y="55" width="280" height="16"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                             <color key="textColor" white="0.33000000000000002" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -916,6 +916,7 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
+                                                        <constraint firstItem="xuh-YJ-wme" firstAttribute="leading" secondItem="tYO-aP-ZHd" secondAttribute="trailing" constant="8" id="33l-Kb-OY1"/>
                                                         <constraint firstItem="ZVG-31-yQf" firstAttribute="leading" secondItem="y56-J4-fJo" secondAttribute="leading" constant="10" id="9ND-Le-I5T"/>
                                                         <constraint firstItem="xuh-YJ-wme" firstAttribute="centerY" secondItem="y56-J4-fJo" secondAttribute="centerY" id="G99-fK-UNF"/>
                                                         <constraint firstItem="ZVG-31-yQf" firstAttribute="leading" secondItem="tYO-aP-ZHd" secondAttribute="leading" id="GK6-eb-c21"/>
@@ -924,6 +925,8 @@
                                                         <constraint firstItem="tYO-aP-ZHd" firstAttribute="top" secondItem="ZVG-31-yQf" secondAttribute="bottom" constant="8" id="f5G-YB-ZUW"/>
                                                         <constraint firstItem="tYO-aP-ZHd" firstAttribute="leading" secondItem="hfw-wM-wQH" secondAttribute="leading" id="jlv-i4-N1z"/>
                                                         <constraint firstItem="ZVG-31-yQf" firstAttribute="top" secondItem="y56-J4-fJo" secondAttribute="top" constant="10" id="l5c-O5-BeA"/>
+                                                        <constraint firstItem="xuh-YJ-wme" firstAttribute="leading" secondItem="hfw-wM-wQH" secondAttribute="trailing" constant="8" id="uiV-iR-IyS"/>
+                                                        <constraint firstItem="xuh-YJ-wme" firstAttribute="leading" secondItem="ZVG-31-yQf" secondAttribute="trailing" constant="8" id="x5i-xh-tfn"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
